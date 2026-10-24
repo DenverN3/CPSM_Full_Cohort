@@ -1,0 +1,31 @@
+[12:01:12] CHOL/analyze waiting for an R slot (max 2)
+[12:01:12] slot 1 acquired
+[2026-09-15 12:01:14] Cohort CHOL | stage analyze | root /Users/denverncube/Desktop/CPSM_agent
+[2026-09-15 12:01:15] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 12:01:15] WARNING [endpoint] No auto candidate met thresholds; using PFI with 20 events (rate 0.571)
+[2026-09-15 12:01:15] Endpoint PFI (auto); 35 samples; 5000 genes modelled
+[2026-09-15 12:01:16] ERROR [genes] Train_Norm_data: 1 gene columns missing that are NOT constant in train (ENSG00000211930.1)
+[2026-09-15 12:01:16] WARNING [power] Underpowered: 18 train events, 2 test events
+[2026-09-15 12:01:16] INFO [clinical] stage_group: test levels unseen in train (Stage III) -> NA
+[2026-09-15 12:01:16] Continuous per-gene Cox on 4999 genes
+[2026-09-15 12:01:16] Gene Cox: 499/4999
+[2026-09-15 12:01:17] Gene Cox: 998/4999
+[2026-09-15 12:01:18] Gene Cox: 1497/4999
+[2026-09-15 12:01:18] Gene Cox: 1996/4999
+[2026-09-15 12:01:19] Gene Cox: 2495/4999
+[2026-09-15 12:01:19] Gene Cox: 2994/4999
+[2026-09-15 12:01:20] Gene Cox: 3493/4999
+[2026-09-15 12:01:20] Gene Cox: 3992/4999
+[2026-09-15 12:01:21] Gene Cox: 4491/4999
+[2026-09-15 12:01:22] Gene Cox: 4990/4999
+[2026-09-15 12:01:22] CPSM Univariate_sig_features_f
+[2026-09-15 12:01:36] CPSM Lasso_PI_scores_f
+[2026-09-15 12:01:39] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-15 12:01:39] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-15 12:01:40] MTLR Model3_PI_Clinical (Model_type=3, 4 features)
+[2026-09-15 12:01:40] MTLR Model4_Univariate_Clinical (Model_type=4, 13 features)
+The sampleTCGA-3X-AAVC-01A-21R-A41I-07is present in the Test dataset.
+
+[2026-09-15 12:01:42] INFO [plot] mean_median_surv_barplot_f skipped: CPSM 1.4.0 expects column 'IDs'; MTLR output has: ID, Mean, Median, OS_month
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-15 12:01:42] qc.json written: /Users/denverncube/Desktop/CPSM_agent/results/CHOL/qc.json (status=partial)

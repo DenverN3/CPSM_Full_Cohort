@@ -1,0 +1,144 @@
+{
+  "cohort": "UCS",
+  "name": "Uterine carcinosarcoma",
+  "status": "success",
+  "started": "2026-09-27 01:59:28",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 47,
+      "events": 31,
+      "rate": 0.659574468085106
+    },
+    {
+      "endpoint": "PFI",
+      "n": 47,
+      "events": 32,
+      "rate": 0.680851063829787
+    }
+  ],
+  "n_genes_after_filter": 457,
+  "n_genes_modelled": 457,
+  "n_samples": 46,
+  "n_events": 31,
+  "gene_column_trace": {
+    "combined_input": 457,
+    "after_data_process_f": 457,
+    "after_tr_test_f": 457,
+    "Train_Norm_data": 457,
+    "Test_Norm_data": 457
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 36,
+  "n_test": 10,
+  "train_events": 24,
+  "test_events": 7,
+  "underpowered": true,
+  "model_covariates": ["Age", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 27,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 3,
+  "model4_genes": ["IRF1", "VASP", "GCLC", "UQCRC2", "PAICS", "HER3", "Glucocorticoid.Receptor", "ACC1", "RICTOR_pT1135", "BiP.GRP78"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.54,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.7,
+      "Train_Mean_MAE": 20.95,
+      "Train_Median_MAE": 7.91,
+      "Train_IBS": 0.191,
+      "Test_C_index": 0.54,
+      "Test_Mean_MAE": 22.99,
+      "Test_Median_MAE": 11.33,
+      "Test_IBS": 0.248
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.76,
+      "Train_Mean_MAE": 20.37,
+      "Train_Median_MAE": 9.78,
+      "Train_IBS": 0.198,
+      "Test_C_index": 0.44,
+      "Test_Mean_MAE": 19.95,
+      "Test_Median_MAE": 10.34,
+      "Test_IBS": 0.241
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.82,
+      "Train_Mean_MAE": 17.86,
+      "Train_Median_MAE": 4.82,
+      "Train_IBS": 0.146,
+      "Test_C_index": 0.51,
+      "Test_Mean_MAE": 22.12,
+      "Test_Median_MAE": 10.35,
+      "Test_IBS": 0.272
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.83,
+      "Train_Mean_MAE": 17.21,
+      "Train_Median_MAE": 12.07,
+      "Train_IBS": 0.141,
+      "Test_C_index": 0.49,
+      "Test_Mean_MAE": 18.89,
+      "Test_Median_MAE": 11.69,
+      "Test_IBS": 0.276
+    }
+  ],
+  "n_genes_p05": 13,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 28,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 01:59:37",
+  "runtime_min": 0.1,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "30/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 32 events (rate 0.681)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 24 train events, 7 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Stage II"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

@@ -1,0 +1,63 @@
+[01:59:37] KICH_rppa/all waiting for an R slot (max 2)
+[01:59:37] slot 1 acquired
+[2026-09-27 01:59:38] Cohort KICH | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:59:39] Fetch: querying GDC for TCGA-KICH RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-KICH
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-KICH
+GDCdownload will download 63 files. A total of 1.387592 MB
+Downloading chunk 1 of 7 (10 files, size = 220.373 KB) as Sun_Sep_27_01_59_46_2026_0.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 2 of 7 (10 files, size = 220.155 KB) as Sun_Sep_27_01_59_46_2026_1.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 3 of 7 (10 files, size = 220.214 KB) as Sun_Sep_27_01_59_46_2026_2.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading chunk 4 of 7 (10 files, size = 220.273 KB) as Sun_Sep_27_01_59_46_2026_3.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 5 of 7 (10 files, size = 220.271 KB) as Sun_Sep_27_01_59_46_2026_4.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading chunk 6 of 7 (10 files, size = 220.29 KB) as Sun_Sep_27_01_59_46_2026_5.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading chunk 7 of 7 (3 files, size = 66.016 KB) as Sun_Sep_27_01_59_46_2026_6.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     |                                                    |  0%                      |                                                    |1.587302% ~4 s remaining  |=                                                   |3.174603% ~2 s remaining  |==                                                  |4.761905% ~1 s remaining  |===                                                 |6.349206% ~1 s remaining  |====                                                |7.936508% ~1 s remaining  |====                                                |9.52381% ~1 s remaining   |=====                                               |11.11111% ~1 s remaining  |======                                              |12.69841% ~1 s remaining  |=======                                             |14.28571% ~0 s remaining  |========                                            |15.87302% ~0 s remaining  |=========                                           |17.46032% ~0 s remaining  |=========                                           |19.04762% ~0 s remaining  |==========                                          |20.63492% ~0 s remaining  |===========                                         |22.22222% ~0 s remaining  |============                                        |23.80952% ~0 s remaining  |=============                                       |25.39683% ~0 s remaining  |==============                                      |26.98413% ~0 s remaining  |==============                                      |28.57143% ~0 s remaining  |===============                                     |30.15873% ~0 s remaining  |================                                    |31.74603% ~0 s remaining  |=================                                   |33.33333% ~0 s remaining  |==================                                  |34.92063% ~0 s remaining  |==================                                  |36.50794% ~0 s remaining  |===================                                 |38.09524% ~0 s remaining  |====================                                |39.68254% ~0 s remaining  |=====================                               |41.26984% ~0 s remaining  |======================                              |42.85714% ~0 s remaining  |=======================                             |44.44444% ~0 s remaining  |=======================                             |46.03175% ~0 s remaining  |========================                            |47.61905% ~0 s remaining  |=========================                           |49.20635% ~0 s remaining  |==========================                          |50.79365% ~0 s remaining  |===========================                         |52.38095% ~0 s remaining  |============================                        |53.96825% ~0 s remaining  |============================                        |55.55556% ~0 s remaining  |=============================                       |57.14286% ~0 s remaining  |==============================                      |58.73016% ~0 s remaining  |===============================                     |60.31746% ~0 s remaining  |================================                    |61.90476% ~0 s remaining  |=================================                   |63.49206% ~0 s remaining  |=================================                   |65.07937% ~0 s remaining  |==================================                  |66.66667% ~0 s remaining  |===================================                 |68.25397% ~0 s remaining  |====================================                |69.84127% ~0 s remaining  |=====================================               |71.42857% ~0 s remaining  |=====================================               |73.01587% ~0 s remaining  |======================================              |74.60317% ~0 s remaining  |=======================================             |76.19048% ~0 s remaining  |========================================            |77.77778% ~0 s remaining  |=========================================           |79.36508% ~0 s remaining  |==========================================          |80.95238% ~0 s remaining  |==========================================          |82.53968% ~0 s remaining  |===========================================         |84.12698% ~0 s remaining  |============================================        |85.71429% ~0 s remaining  |=============================================       |87.30159% ~0 s remaining  |==============================================      |88.88889% ~0 s remaining  |===============================================     |90.47619% ~0 s remaining  |===============================================     |92.06349% ~0 s remaining  |================================================    |93.65079% ~0 s remaining  |=================================================   |95.2381% ~0 s remaining   |==================================================  |96.8254% ~0 s remaining   |=================================================== |98.4127% ~0 s remaining   |====================================================|100% ~0 s remaining       |====================================================|100%                      Completed after 0 s 
+[2026-09-27 02:00:05] Fetch: saved /Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-KICH_rppa.rds (487 antibodies x 63 samples)
+[2026-09-27 02:00:05] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 02:00:05] INFO [features] 30/487 antibodies dropped for >30% missing values
+[2026-09-27 02:00:06] WARNING [endpoint] No auto candidate met thresholds; using PFI with 10 events (rate 0.161)
+[2026-09-27 02:00:06] Endpoint PFI (auto); 62 samples; 457 genes modelled
+[2026-09-27 02:00:06] WARNING [power] Underpowered: 5 train events, 5 test events
+[2026-09-27 02:00:06] Continuous per-gene Cox on 457 genes
+[2026-09-27 02:00:06] Gene Cox: 45/457
+[2026-09-27 02:00:06] Gene Cox: 90/457
+[2026-09-27 02:00:06] Gene Cox: 135/457
+[2026-09-27 02:00:06] Gene Cox: 180/457
+[2026-09-27 02:00:06] Gene Cox: 225/457
+[2026-09-27 02:00:06] Gene Cox: 270/457
+[2026-09-27 02:00:06] Gene Cox: 315/457
+[2026-09-27 02:00:06] Gene Cox: 360/457
+[2026-09-27 02:00:06] Gene Cox: 405/457
+[2026-09-27 02:00:06] Gene Cox: 450/457
+[2026-09-27 02:00:06] CPSM Univariate_sig_features_f
+[2026-09-27 02:00:07] CPSM Lasso_PI_scores_f
+[2026-09-27 02:00:09] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-27 02:00:10] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 02:00:11] MTLR Model3_PI_Clinical (Model_type=3, 4 features)
+[2026-09-27 02:00:13] WARNING [model] Model4 skipped: no CPSM univariate genes
+The sampleTCGA-KL-8328-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 02:00:14] qc.json written: /Users/denverncube/work/CPSM_agent/results/KICH/rppa/qc.json (status=success)

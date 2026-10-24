@@ -1,0 +1,134 @@
+{
+  "cohort": "LIHC",
+  "name": "Liver hepatocellular carcinoma",
+  "status": "success",
+  "started": "2026-09-27 03:47:25",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 182,
+      "events": 94,
+      "rate": 0.516483516483517
+    },
+    {
+      "endpoint": "PFI",
+      "n": 183,
+      "events": 96,
+      "rate": 0.524590163934426
+    }
+  ],
+  "n_genes_after_filter": 458,
+  "n_genes_modelled": 458,
+  "n_samples": 173,
+  "n_events": 91,
+  "gene_column_trace": {
+    "combined_input": 458,
+    "after_data_process_f": 458,
+    "after_tr_test_f": 458,
+    "Train_Norm_data": 458,
+    "Test_Norm_data": 458
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 138,
+  "n_test": 35,
+  "train_events": 73,
+  "test_events": 18,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 33,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 31,
+  "model4_genes": ["JNK_pT183Y185", "DVL3", "MERIT40_pS29", "AKT", "ACETYLATUBULINLYS40", "GSK.3B", "PAK1", "X1433BETA", "CDK1", "MEK2"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.7,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.64,
+      "Train_Mean_MAE": 23.63,
+      "Train_Median_MAE": 15.86,
+      "Train_IBS": 0.173,
+      "Test_C_index": 0.59,
+      "Test_Mean_MAE": 24.3,
+      "Test_Median_MAE": 13.33,
+      "Test_IBS": 0.204
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.86,
+      "Train_Mean_MAE": 30.09,
+      "Train_Median_MAE": 13.65,
+      "Train_IBS": 0.088,
+      "Test_C_index": 0.65,
+      "Test_Mean_MAE": 28.73,
+      "Test_Median_MAE": 16.7,
+      "Test_IBS": 0.173
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 23.59,
+      "Train_Median_MAE": 12.8,
+      "Train_IBS": 0.089,
+      "Test_C_index": 0.66,
+      "Test_Mean_MAE": 26.43,
+      "Test_Median_MAE": 15.92,
+      "Test_IBS": 0.179
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.71,
+      "Train_Mean_MAE": 23.46,
+      "Train_Median_MAE": 19.37,
+      "Train_IBS": 0.161,
+      "Test_C_index": 0.7,
+      "Test_Mean_MAE": 24.13,
+      "Test_Median_MAE": 15.66,
+      "Test_IBS": 0.187
+    }
+  ],
+  "n_genes_p05": 31,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 25,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:48:04",
+  "runtime_min": 0.6,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "29/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Stage IV"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

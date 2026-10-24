@@ -1,0 +1,8 @@
+== LAML/all exit=1 log=/Users/denverncube/work/CPSM_agent/results/LAML/logs/all_20260916_084729.log
+[2026-09-16 08:49:56] FAILED: Can't select columns that don't exist.
+[2026-09-16 08:49:56] qc.json written: /Users/denverncube/work/CPSM_agent/results/LAML/qc.json (status=failed)
+== LAML/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/LAML/logs/all_20260916_114958.log
+[2026-09-16 11:50:21] WARNING [fetch] GDCprepare failed (Can't select columns that don't exist.
+[2026-09-16 11:50:29] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-16 11:50:29] Endpoint OS (auto); 130 samples; 5000 genes modelled
+[2026-09-16 11:51:15] qc.json written: /Users/denverncube/work/CPSM_agent/results/LAML/qc.json (status=success)

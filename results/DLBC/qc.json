@@ -1,0 +1,130 @@
+{
+  "cohort": "DLBC",
+  "name": "Lymphoid neoplasm diffuse large B-cell lymphoma",
+  "status": "success",
+  "started": "2026-09-15 21:26:56",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 47,
+      "events": 9,
+      "rate": 0.191489361702128
+    },
+    {
+      "endpoint": "PFI",
+      "n": 47,
+      "events": 12,
+      "rate": 0.25531914893617
+    }
+  ],
+  "n_genes_after_filter": 37990,
+  "n_genes_modelled": 5000,
+  "n_samples": 46,
+  "n_events": 12,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 4999,
+    "Test_Norm_data": 4999
+  },
+  "gene_drops": [
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000211682.2",
+      "train_modal_value_fraction": 0.833,
+      "explained_by_cpsm_near_constant_filter": true
+    }
+  ],
+  "n_genes_removed_by_cpsm_filter": 1,
+  "n_train": 36,
+  "n_test": 10,
+  "train_events": 7,
+  "test_events": 5,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 2,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 3,
+  "model4_genes": ["ENSG00000268940.5", "ENSG00000102109.9"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.76,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.84,
+      "Train_Mean_MAE": 635.92,
+      "Train_Median_MAE": 415.62,
+      "Train_IBS": 0.132,
+      "Test_C_index": 0.72,
+      "Test_Mean_MAE": 360.99,
+      "Test_Median_MAE": 281.35,
+      "Test_IBS": 0.498
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.94,
+      "Train_Mean_MAE": 26213.29,
+      "Train_Median_MAE": 4106.5,
+      "Train_IBS": 0.076,
+      "Test_C_index": 0.64,
+      "Test_Mean_MAE": 9526.13,
+      "Test_Median_MAE": 4966.74,
+      "Test_IBS": 0.659
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.94,
+      "Train_Mean_MAE": 1452.84,
+      "Train_Median_MAE": 875.65,
+      "Train_IBS": 0.088,
+      "Test_C_index": 0.68,
+      "Test_Mean_MAE": 529.62,
+      "Test_Median_MAE": 450.48,
+      "Test_IBS": 0.578
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.88,
+      "Train_Mean_MAE": 277.17,
+      "Train_Median_MAE": 283.91,
+      "Train_IBS": 0.152,
+      "Test_C_index": 0.76,
+      "Test_Mean_MAE": 242.95,
+      "Test_Median_MAE": 241.51,
+      "Test_IBS": 0.463
+    }
+  ],
+  "n_genes_p05": 146,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 180,
+  "cpsm_median_split_minority_fraction_median": 0.458333333333333,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 21:27:26",
+  "runtime_min": 0.5,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:13"
+}

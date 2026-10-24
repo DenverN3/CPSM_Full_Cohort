@@ -1,0 +1,136 @@
+{
+  "cohort": "ACC",
+  "name": "Adrenocortical carcinoma",
+  "status": "success",
+  "started": "2026-09-15 21:27:29",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 79,
+      "events": 28,
+      "rate": 0.354430379746835
+    },
+    {
+      "endpoint": "PFI",
+      "n": 79,
+      "events": 41,
+      "rate": 0.518987341772152
+    }
+  ],
+  "n_genes_after_filter": 35813,
+  "n_genes_modelled": 5000,
+  "n_samples": 78,
+  "n_events": 40,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 4998,
+    "Test_Norm_data": 4998
+  },
+  "gene_drops": [
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000150750.8",
+      "train_modal_value_fraction": 0.823,
+      "explained_by_cpsm_near_constant_filter": true
+    },
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000282122.1",
+      "train_modal_value_fraction": 0.823,
+      "explained_by_cpsm_near_constant_filter": true
+    }
+  ],
+  "n_genes_removed_by_cpsm_filter": 2,
+  "n_train": 62,
+  "n_test": 16,
+  "train_events": 32,
+  "test_events": 8,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 1907,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 7,
+  "model4_genes": ["ENSG00000137501.17", "ENSG00000136938.9", "ENSG00000172817.4", "ENSG00000013583.10", "ENSG00000163879.11", "ENSG00000164638.10", "ENSG00000168546.11", "ENSG00000125675.18", "ENSG00000152767.17", "ENSG00000165661.17"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model2",
+  "best_test_c_index": 0.77,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.72,
+      "Train_Mean_MAE": 33.54,
+      "Train_Median_MAE": 24.07,
+      "Train_IBS": 0.206,
+      "Test_C_index": 0.66,
+      "Test_Mean_MAE": 38.88,
+      "Test_Median_MAE": 45.8,
+      "Test_IBS": 0.244
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.88,
+      "Train_Mean_MAE": 56.17,
+      "Train_Median_MAE": 23.72,
+      "Train_IBS": 0.104,
+      "Test_C_index": 0.77,
+      "Test_Mean_MAE": 59.33,
+      "Test_Median_MAE": 32.9,
+      "Test_IBS": 0.306
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.89,
+      "Train_Mean_MAE": 34.85,
+      "Train_Median_MAE": 15.61,
+      "Train_IBS": 0.129,
+      "Test_C_index": 0.74,
+      "Test_Mean_MAE": 46.06,
+      "Test_Median_MAE": 39.84,
+      "Test_IBS": 0.252
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.89,
+      "Train_Mean_MAE": 47.56,
+      "Train_Median_MAE": 42.3,
+      "Train_IBS": 0.111,
+      "Test_C_index": 0.68,
+      "Test_Mean_MAE": 51.85,
+      "Test_Median_MAE": 34.37,
+      "Test_IBS": 0.248
+    }
+  ],
+  "n_genes_p05": 2183,
+  "n_genes_fdr05": 1632,
+  "n_genes_fdr05_test_direction_agrees": 1391,
+  "n_genes_ph_violation": 282,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 21:28:07",
+  "runtime_min": 0.6,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:03:58"
+}

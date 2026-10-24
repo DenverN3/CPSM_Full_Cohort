@@ -1,0 +1,138 @@
+{
+  "cohort": "BRCA",
+  "name": "Breast invasive carcinoma",
+  "status": "success",
+  "started": "2026-09-27 03:55:47",
+  "locked": true,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage", "subtype"],
+  "configured_endpoint": "OS",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "configured",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 869,
+      "events": 122,
+      "rate": 0.140391254315305
+    }
+  ],
+  "n_genes_after_filter": 463,
+  "n_genes_modelled": 463,
+  "n_samples": 850,
+  "n_events": 122,
+  "gene_column_trace": {
+    "combined_input": 463,
+    "after_data_process_f": 463,
+    "after_tr_test_f": 463,
+    "Train_Norm_data": 463,
+    "Test_Norm_data": 463
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 680,
+  "n_test": 170,
+  "train_events": 106,
+  "test_events": 16,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group", "subtype"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 56,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 5,
+  "model4_genes": ["EIF4G", "CD45", "CASPASE7CLEAVEDD198", "CD38", "DM.K9.Histone.H3", "LCK", "CIITA", "TUBERIN_pT1462", "CD86", "TRANSGLUTAMINASE"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.74,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.76,
+      "Train_Mean_MAE": 88.47,
+      "Train_Median_MAE": 93.13,
+      "Train_IBS": 0.195,
+      "Test_C_index": 0.74,
+      "Test_Mean_MAE": 90.1,
+      "Test_Median_MAE": 93.6,
+      "Test_IBS": 0.241
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.7,
+      "Train_Mean_MAE": 92.24,
+      "Train_Median_MAE": 91.43,
+      "Train_IBS": 0.196,
+      "Test_C_index": 0.61,
+      "Test_Mean_MAE": 93.72,
+      "Test_Median_MAE": 91.03,
+      "Test_IBS": 0.236
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 99.16,
+      "Train_Median_MAE": 93.82,
+      "Train_IBS": 0.168,
+      "Test_C_index": 0.71,
+      "Test_Mean_MAE": 100.52,
+      "Test_Median_MAE": 98.3,
+      "Test_IBS": 0.178
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.81,
+      "Train_Mean_MAE": 100.66,
+      "Train_Median_MAE": 94.23,
+      "Train_IBS": 0.162,
+      "Test_C_index": 0.7,
+      "Test_Mean_MAE": 101.6,
+      "Test_Median_MAE": 96.91,
+      "Test_IBS": 0.162
+    }
+  ],
+  "n_genes_p05": 63,
+  "n_genes_fdr05": 9,
+  "n_genes_fdr05_test_direction_agrees": 9,
+  "n_genes_ph_violation": 50,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 04:03:03",
+  "runtime_min": 7.3,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "24/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "5124 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "samples",
+      "severity": "info",
+      "message": "1 samples without a TCGA-CDR record removed"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "subtype: merged rare levels into Other: Unknown"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

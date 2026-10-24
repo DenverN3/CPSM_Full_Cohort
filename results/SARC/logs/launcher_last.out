@@ -1,0 +1,4 @@
+== SARC/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/SARC/logs/all_20260915_212601.log
+[2026-09-15 22:22:32] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 22:22:33] Endpoint OS (auto); 259 samples; 5000 genes modelled
+[2026-09-15 22:24:16] qc.json written: /Users/denverncube/work/CPSM_agent/results/SARC/qc.json (status=success)

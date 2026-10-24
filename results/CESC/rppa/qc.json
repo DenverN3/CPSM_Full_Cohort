@@ -1,0 +1,149 @@
+{
+  "cohort": "CESC",
+  "name": "Cervical squamous cell carcinoma and endocervical adenocarcinoma",
+  "status": "success",
+  "started": "2026-09-27 02:12:50",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 164,
+      "events": 30,
+      "rate": 0.182926829268293
+    },
+    {
+      "endpoint": "PFI",
+      "n": 164,
+      "events": 32,
+      "rate": 0.195121951219512
+    }
+  ],
+  "n_genes_after_filter": 457,
+  "n_genes_modelled": 457,
+  "n_samples": 154,
+  "n_events": 32,
+  "gene_column_trace": {
+    "combined_input": 457,
+    "after_data_process_f": 457,
+    "after_tr_test_f": 457,
+    "Train_Norm_data": 457,
+    "Test_Norm_data": 457
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 123,
+  "n_test": 31,
+  "train_events": 26,
+  "test_events": 6,
+  "underpowered": true,
+  "model_covariates": ["Age", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 13,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 17,
+  "model4_genes": ["SRC_pY416", "MelanA", "ASNS", "X1433EPSILON", "ATM_pS1981", "Glutamate.D1.2", "Cyclin.D3", "GAB2", "PDK1", "SCD1"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model2",
+  "best_test_c_index": 0.71,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.63,
+      "Train_Mean_MAE": 123.31,
+      "Train_Median_MAE": 140.75,
+      "Train_IBS": 0.224,
+      "Test_C_index": 0.53,
+      "Test_Mean_MAE": 120.06,
+      "Test_Median_MAE": 129.99,
+      "Test_IBS": 0.337
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.94,
+      "Train_Mean_MAE": 810.89,
+      "Train_Median_MAE": 299.48,
+      "Train_IBS": 0.08,
+      "Test_C_index": 0.71,
+      "Test_Mean_MAE": 1473.18,
+      "Test_Median_MAE": 387.91,
+      "Test_IBS": 0.257
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.96,
+      "Train_Mean_MAE": 427.6,
+      "Train_Median_MAE": 259.99,
+      "Train_IBS": 0.07,
+      "Test_C_index": 0.71,
+      "Test_Mean_MAE": 486.23,
+      "Test_Median_MAE": 373.57,
+      "Test_IBS": 0.332
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.86,
+      "Train_Mean_MAE": 159.11,
+      "Train_Median_MAE": 161.5,
+      "Train_IBS": 0.158,
+      "Test_C_index": 0.67,
+      "Test_Mean_MAE": 169.72,
+      "Test_Median_MAE": 156.82,
+      "Test_IBS": 0.301
+    }
+  ],
+  "n_genes_p05": 28,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 70,
+  "cpsm_median_split_minority_fraction_median": 0.495934959349593,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:13:21",
+  "runtime_min": 0.5,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "30/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 32 events (rate 0.195)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 26 train events, 6 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Unknown"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_type: merged rare levels into Other: Adenosquamous; Endocervical Adenocarcinoma of the Usual Type; Endometrioid Adenocarcinoma of Endocervix; Mucinous Adenocarcinoma of Endocervical Type"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

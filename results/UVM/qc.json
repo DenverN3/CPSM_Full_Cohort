@@ -1,0 +1,136 @@
+{
+  "cohort": "UVM",
+  "name": "Uveal melanoma",
+  "status": "success",
+  "started": "2026-09-15 21:46:34",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 80,
+      "events": 23,
+      "rate": 0.2875
+    },
+    {
+      "endpoint": "PFI",
+      "n": 79,
+      "events": 29,
+      "rate": 0.367088607594937
+    }
+  ],
+  "n_genes_after_filter": 32602,
+  "n_genes_modelled": 5000,
+  "n_samples": 75,
+  "n_events": 29,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 4998,
+    "Test_Norm_data": 4998
+  },
+  "gene_drops": [
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000240671.4",
+      "train_modal_value_fraction": 0.817,
+      "explained_by_cpsm_near_constant_filter": true
+    },
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000211642.3",
+      "train_modal_value_fraction": 0.8,
+      "explained_by_cpsm_near_constant_filter": true
+    }
+  ],
+  "n_genes_removed_by_cpsm_filter": 2,
+  "n_train": 60,
+  "n_test": 15,
+  "train_events": 23,
+  "test_events": 6,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 1675,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 6,
+  "model4_genes": ["ENSG00000170549.4", "ENSG00000082146.13", "ENSG00000204789.4", "ENSG00000104369.5", "ENSG00000151726.15", "ENSG00000174156.15", "ENSG00000183674.12", "ENSG00000147852.16", "ENSG00000143036.17", "ENSG00000244026.6"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.83,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.7,
+      "Train_Mean_MAE": 21.29,
+      "Train_Median_MAE": 21.57,
+      "Train_IBS": 0.208,
+      "Test_C_index": 0.41,
+      "Test_Mean_MAE": 23.92,
+      "Test_Median_MAE": 25.41,
+      "Test_IBS": 0.216
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.93,
+      "Train_Mean_MAE": 69.81,
+      "Train_Median_MAE": 42.24,
+      "Train_IBS": 0.094,
+      "Test_C_index": 0.76,
+      "Test_Mean_MAE": 77.78,
+      "Test_Median_MAE": 33.53,
+      "Test_IBS": 0.155
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.95,
+      "Train_Mean_MAE": 42.97,
+      "Train_Median_MAE": 30.3,
+      "Train_IBS": 0.089,
+      "Test_C_index": 0.83,
+      "Test_Mean_MAE": 52.83,
+      "Test_Median_MAE": 35.25,
+      "Test_IBS": 0.167
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.91,
+      "Train_Mean_MAE": 32.18,
+      "Train_Median_MAE": 29.16,
+      "Train_IBS": 0.108,
+      "Test_C_index": 0.83,
+      "Test_Mean_MAE": 42.38,
+      "Test_Median_MAE": 34.88,
+      "Test_IBS": 0.116
+    }
+  ],
+  "n_genes_p05": 1923,
+  "n_genes_fdr05": 1255,
+  "n_genes_fdr05_test_direction_agrees": 1133,
+  "n_genes_ph_violation": 157,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 21:47:09",
+  "runtime_min": 0.6,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:05:15"
+}

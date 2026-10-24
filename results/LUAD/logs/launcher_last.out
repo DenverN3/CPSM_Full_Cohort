@@ -1,0 +1,4 @@
+== LUAD/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/LUAD/logs/all_20260915_193432.log
+[2026-09-15 19:44:02] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 19:44:05] Endpoint OS (configured); 504 samples; 5000 genes modelled
+[2026-09-15 20:42:50] qc.json written: /Users/denverncube/work/CPSM_agent/results/LUAD/qc.json (status=success)

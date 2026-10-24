@@ -1,0 +1,123 @@
+{
+  "cohort": "ESCA",
+  "name": "Esophageal carcinoma",
+  "status": "success",
+  "started": "2026-09-15 21:32:15",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 184,
+      "events": 77,
+      "rate": 0.418478260869565
+    },
+    {
+      "endpoint": "PFI",
+      "n": 184,
+      "events": 87,
+      "rate": 0.472826086956522
+    }
+  ],
+  "n_genes_after_filter": 47738,
+  "n_genes_modelled": 5000,
+  "n_samples": 181,
+  "n_events": 76,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 5000,
+    "Test_Norm_data": 5000
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 144,
+  "n_test": 37,
+  "train_events": 63,
+  "test_events": 13,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 114,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 4,
+  "model4_genes": ["ENSG00000198814.13", "ENSG00000171388.12", "ENSG00000166979.13", "ENSG00000137875.4", "ENSG00000120694.20", "ENSG00000106066.15", "ENSG00000126262.5", "ENSG00000158874.11", "ENSG00000090006.18", "ENSG00000199753.1"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.57,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.69,
+      "Train_Mean_MAE": 18.34,
+      "Train_Median_MAE": 14.44,
+      "Train_IBS": 0.186,
+      "Test_C_index": 0.54,
+      "Test_Mean_MAE": 21.6,
+      "Test_Median_MAE": 17.54,
+      "Test_IBS": 0.24
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.74,
+      "Train_Mean_MAE": 26.02,
+      "Train_Median_MAE": 13.65,
+      "Train_IBS": 0.135,
+      "Test_C_index": 0.44,
+      "Test_Mean_MAE": 40.98,
+      "Test_Median_MAE": 13.31,
+      "Test_IBS": 0.375
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.77,
+      "Train_Mean_MAE": 22.6,
+      "Train_Median_MAE": 12.21,
+      "Train_IBS": 0.125,
+      "Test_C_index": 0.51,
+      "Test_Mean_MAE": 23.94,
+      "Test_Median_MAE": 14.89,
+      "Test_IBS": 0.245
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.78,
+      "Train_Mean_MAE": 18.55,
+      "Train_Median_MAE": 16.2,
+      "Train_IBS": 0.155,
+      "Test_C_index": 0.57,
+      "Test_Mean_MAE": 23.72,
+      "Test_Median_MAE": 19.55,
+      "Test_IBS": 0.273
+    }
+  ],
+  "n_genes_p05": 132,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 227,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 21:33:11",
+  "runtime_min": 0.9,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:15"
+}

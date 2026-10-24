@@ -1,0 +1,6 @@
+== LIHC/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/LIHC/logs/all_20260915_212601.log
+[2026-09-15 22:31:53] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 22:31:55] Endpoint OS (auto); 365 samples; 5000 genes modelled
+[2026-09-15 22:32:25] ERROR [lasso] x should be a matrix with 2 or more columns
+[2026-09-15 22:32:48] WARNING [model] Models 2 and 3 skipped: LASSO unavailable
+[2026-09-15 22:33:17] qc.json written: /Users/denverncube/work/CPSM_agent/results/LIHC/qc.json (status=partial)

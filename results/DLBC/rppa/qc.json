@@ -1,0 +1,134 @@
+{
+  "cohort": "DLBC",
+  "name": "Lymphoid neoplasm diffuse large B-cell lymphoma",
+  "status": "success",
+  "started": "2026-09-27 20:56:50",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 32,
+      "events": 6,
+      "rate": 0.1875
+    },
+    {
+      "endpoint": "PFI",
+      "n": 32,
+      "events": 7,
+      "rate": 0.21875
+    }
+  ],
+  "n_genes_after_filter": 456,
+  "n_genes_modelled": 456,
+  "n_samples": 31,
+  "n_events": 7,
+  "gene_column_trace": {
+    "combined_input": 456,
+    "after_data_process_f": 456,
+    "after_tr_test_f": 456,
+    "Train_Norm_data": 456,
+    "Test_Norm_data": 456
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 24,
+  "n_test": 7,
+  "train_events": 6,
+  "test_events": 1,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 0,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 2,
+  "models_built": ["Model1", "Model2", "Model3"],
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.71,
+      "Train_Mean_MAE": 76.43,
+      "Train_Median_MAE": 71.47,
+      "Train_IBS": 0.173,
+      "Test_C_index": null,
+      "Test_Mean_MAE": 71.37,
+      "Test_Median_MAE": 85.16,
+      "Test_IBS": 0.045
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.88,
+      "Train_Mean_MAE": 91.36,
+      "Train_Median_MAE": 103.59,
+      "Train_IBS": 0.169,
+      "Test_C_index": null,
+      "Test_Mean_MAE": 53.1,
+      "Test_Median_MAE": 43.59,
+      "Test_IBS": 0.11
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.97,
+      "Train_Mean_MAE": 41419.6,
+      "Train_Median_MAE": 2082.65,
+      "Train_IBS": 0.011,
+      "Test_C_index": null,
+      "Test_Mean_MAE": 11713.95,
+      "Test_Median_MAE": 1197.65,
+      "Test_IBS": 0.044
+    }
+  ],
+  "n_genes_p05": 44,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 7,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 20:56:57",
+  "runtime_min": 0.1,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "31/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 7 events (rate 0.219)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 6 train events, 1 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Stage I; Stage III; Stage IV; Unknown"
+    },
+    {
+      "stage": "model",
+      "severity": "warning",
+      "message": "Model4 skipped: no CPSM univariate genes"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

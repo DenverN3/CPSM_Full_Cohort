@@ -1,0 +1,6 @@
+[11:33:07] CHOL/analyze waiting for an R slot (max 2)
+[11:33:07] slot 1 acquired
+[2026-09-15 11:33:09] Cohort CHOL | stage analyze | root /Users/denverncube/Desktop/CPSM_agent
+[2026-09-15 11:33:10] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 11:33:10] FAILED: No cached expression for CHOL. Run stage 'fetch' first.
+[2026-09-15 11:33:10] qc.json written: /Users/denverncube/Desktop/CPSM_agent/results/CHOL/qc.json (status=failed)

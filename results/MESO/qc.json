@@ -1,0 +1,130 @@
+{
+  "cohort": "MESO",
+  "name": "Mesothelioma",
+  "status": "success",
+  "started": "2026-09-15 22:55:09",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 85,
+      "events": 73,
+      "rate": 0.858823529411765
+    },
+    {
+      "endpoint": "PFI",
+      "n": 83,
+      "events": 59,
+      "rate": 0.710843373493976
+    }
+  ],
+  "n_genes_after_filter": 37522,
+  "n_genes_modelled": 5000,
+  "n_samples": 85,
+  "n_events": 73,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 4999,
+    "Test_Norm_data": 4999
+  },
+  "gene_drops": [
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000249321.1",
+      "train_modal_value_fraction": 0.809,
+      "explained_by_cpsm_near_constant_filter": true
+    }
+  ],
+  "n_genes_removed_by_cpsm_filter": 1,
+  "n_train": 68,
+  "n_test": 17,
+  "train_events": 56,
+  "test_events": 17,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 1300,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 10,
+  "model4_genes": ["ENSG00000183856.11", "ENSG00000123485.12", "ENSG00000117724.13", "ENSG00000171241.9", "ENSG00000157456.8", "ENSG00000089685.15", "ENSG00000169679.15", "ENSG00000110880.11", "ENSG00000182481.10", "ENSG00000068489.13"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.86,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.61,
+      "Train_Mean_MAE": 13.43,
+      "Train_Median_MAE": 9.86,
+      "Train_IBS": 0.155,
+      "Test_C_index": 0.53,
+      "Test_Mean_MAE": 15.35,
+      "Test_Median_MAE": 11.45,
+      "Test_IBS": 0.816
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.82,
+      "Train_Mean_MAE": 19.76,
+      "Train_Median_MAE": 6.29,
+      "Train_IBS": 0.071,
+      "Test_C_index": 0.8,
+      "Test_Mean_MAE": 14.11,
+      "Test_Median_MAE": 10.13,
+      "Test_IBS": 179928793705.777
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.81,
+      "Train_Mean_MAE": 10.29,
+      "Train_Median_MAE": 7.17,
+      "Train_IBS": 0.108,
+      "Test_C_index": 0.81,
+      "Test_Mean_MAE": 12.43,
+      "Test_Median_MAE": 9.24,
+      "Test_IBS": 0.579
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.76,
+      "Train_Mean_MAE": 11.2,
+      "Train_Median_MAE": 10.65,
+      "Train_IBS": 0.119,
+      "Test_C_index": 0.86,
+      "Test_Mean_MAE": 12.75,
+      "Test_Median_MAE": 10.09,
+      "Test_IBS": 0.595
+    }
+  ],
+  "n_genes_p05": 1486,
+  "n_genes_fdr05": 771,
+  "n_genes_fdr05_test_direction_agrees": 691,
+  "n_genes_ph_violation": 249,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 22:55:48",
+  "runtime_min": 0.6,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:41"
+}

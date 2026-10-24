@@ -1,0 +1,27 @@
+[22:39:58] PCPG_rppa/analyze waiting for an R slot (max 2)
+[22:39:58] slot 1 acquired
+[2026-09-27 22:39:59] Cohort PCPG | platform rppa | stage analyze | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 22:40:00] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 22:40:00] INFO [features] 30/487 antibodies dropped for >30% missing values
+[2026-09-27 22:40:00] WARNING [endpoint] No auto candidate met thresholds; using PFI with 7 events (rate 0.089)
+[2026-09-27 22:40:01] Endpoint PFI (auto); 79 samples; 457 genes modelled
+[2026-09-27 22:40:01] WARNING [power] Underpowered: 7 train events, 0 test events
+[2026-09-27 22:40:01] Continuous per-gene Cox on 457 genes
+[2026-09-27 22:40:01] Gene Cox: 45/457
+[2026-09-27 22:40:01] Gene Cox: 90/457
+[2026-09-27 22:40:01] Gene Cox: 135/457
+[2026-09-27 22:40:01] Gene Cox: 180/457
+[2026-09-27 22:40:01] Gene Cox: 225/457
+[2026-09-27 22:40:01] Gene Cox: 270/457
+[2026-09-27 22:40:01] Gene Cox: 315/457
+[2026-09-27 22:40:01] Gene Cox: 360/457
+[2026-09-27 22:40:01] Gene Cox: 405/457
+[2026-09-27 22:40:01] Gene Cox: 450/457
+[2026-09-27 22:40:01] CPSM Univariate_sig_features_f
+[2026-09-27 22:40:02] CPSM Lasso_PI_scores_f
+[2026-09-27 22:40:04] ERROR [lasso] x should be a matrix with 2 or more columns
+[2026-09-27 22:40:04] MTLR Model1_Clinical (Model_type=1, 2 features)
+[2026-09-27 22:40:06] WARNING [model] Models 2 and 3 skipped: LASSO unavailable
+[2026-09-27 22:40:06] MTLR Model4_Univariate_Clinical (Model_type=4, 3 features)
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 22:40:08] qc.json written: /Users/denverncube/work/CPSM_agent/results/PCPG/rppa/qc.json (status=partial)

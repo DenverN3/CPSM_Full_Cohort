@@ -1,0 +1,32 @@
+[03:48:58] OV_rppa/all waiting for an R slot (max 2)
+[03:48:58] slot 2 acquired
+[2026-09-27 03:49:00] Cohort OV | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 03:49:00] Fetch: cached RPPA matrix exists (/Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-OV_rppa.rds); skipping
+[2026-09-27 03:49:01] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 03:49:01] INFO [features] 23/487 antibodies dropped for >30% missing values
+[2026-09-27 03:49:01] INFO [features] 7541 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 03:49:01] INFO [samples] 1 samples without a TCGA-CDR record removed
+[2026-09-27 03:49:01] Endpoint OS (auto); 416 samples; 464 genes modelled
+[2026-09-27 03:49:01] INFO [clinical] stage_group: merged rare levels into Other: Unknown
+[2026-09-27 03:49:01] Continuous per-gene Cox on 464 genes
+[2026-09-27 03:49:01] Gene Cox: 46/464
+[2026-09-27 03:49:01] Gene Cox: 92/464
+[2026-09-27 03:49:01] Gene Cox: 138/464
+[2026-09-27 03:49:01] Gene Cox: 184/464
+[2026-09-27 03:49:01] Gene Cox: 230/464
+[2026-09-27 03:49:01] Gene Cox: 276/464
+[2026-09-27 03:49:01] Gene Cox: 322/464
+[2026-09-27 03:49:02] Gene Cox: 368/464
+[2026-09-27 03:49:02] Gene Cox: 414/464
+[2026-09-27 03:49:02] Gene Cox: 460/464
+[2026-09-27 03:49:02] CPSM Univariate_sig_features_f
+[2026-09-27 03:49:03] CPSM Lasso_PI_scores_f
+[2026-09-27 03:49:10] MTLR Model1_Clinical (Model_type=1, 2 features)
+[2026-09-27 03:49:41] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 03:50:09] MTLR Model3_PI_Clinical (Model_type=3, 3 features)
+[2026-09-27 03:50:41] MTLR Model4_Univariate_Clinical (Model_type=4, 12 features)
+The sampleTCGA-04-1514-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 03:51:21] qc.json written: /Users/denverncube/work/CPSM_agent/results/OV/rppa/qc.json (status=success)

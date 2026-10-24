@@ -1,0 +1,133 @@
+{
+  "cohort": "GBM",
+  "name": "Glioblastoma multiforme",
+  "status": "success",
+  "started": "2026-09-27 03:33:18",
+  "locked": true,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "subtype"],
+  "configured_endpoint": "OS",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "configured",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 230,
+      "events": 170,
+      "rate": 0.739130434782609
+    }
+  ],
+  "n_genes_after_filter": 223,
+  "n_genes_modelled": 223,
+  "n_samples": 225,
+  "n_events": 168,
+  "gene_column_trace": {
+    "combined_input": 223,
+    "after_data_process_f": 223,
+    "after_tr_test_f": 223,
+    "Train_Norm_data": 223,
+    "Test_Norm_data": 223
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 180,
+  "n_test": 45,
+  "train_events": 133,
+  "test_events": 35,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "subtype"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 20,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 32,
+  "model4_genes": ["P62LCKLIGAND", "ERCC5", "CASPASE8", "NDRG1_pT346", "PAI1", "PEA15", "CD49B", "CMYC", "SRC", "TFRC"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.6,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.72,
+      "Train_Mean_MAE": 10.19,
+      "Train_Median_MAE": 6.48,
+      "Train_IBS": 0.095,
+      "Test_C_index": 0.6,
+      "Test_Mean_MAE": 9.66,
+      "Test_Median_MAE": 7.14,
+      "Test_IBS": 0.063
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.79,
+      "Train_Mean_MAE": 11.46,
+      "Train_Median_MAE": 6.1,
+      "Train_IBS": 0.069,
+      "Test_C_index": 0.48,
+      "Test_Mean_MAE": 16.57,
+      "Test_Median_MAE": 9.26,
+      "Test_IBS": 0.081
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.82,
+      "Train_Mean_MAE": 10.09,
+      "Train_Median_MAE": 5.68,
+      "Train_IBS": 0.069,
+      "Test_C_index": 0.58,
+      "Test_Mean_MAE": 9.96,
+      "Test_Median_MAE": 7.16,
+      "Test_IBS": 0.065
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.75,
+      "Train_Mean_MAE": 10.25,
+      "Train_Median_MAE": 9.29,
+      "Train_IBS": 0.088,
+      "Test_C_index": 0.56,
+      "Test_Mean_MAE": 9.68,
+      "Test_Median_MAE": 6.81,
+      "Test_IBS": 0.064
+    }
+  ],
+  "n_genes_p05": 26,
+  "n_genes_fdr05": 3,
+  "n_genes_fdr05_test_direction_agrees": 3,
+  "n_genes_ph_violation": 9,
+  "cpsm_median_split_minority_fraction_median": 0.497222222222222,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:34:00",
+  "runtime_min": 0.7,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "984/1207 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "108 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "samples",
+      "severity": "info",
+      "message": "1 samples without a TCGA-CDR record removed"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

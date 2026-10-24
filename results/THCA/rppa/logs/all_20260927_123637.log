@@ -1,0 +1,67 @@
+[12:36:37] THCA_rppa/all waiting for an R slot (max 2)
+[12:36:37] slot 1 acquired
+[2026-09-27 12:36:39] Cohort THCA | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 12:36:40] Fetch: querying GDC for TCGA-THCA RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-THCA
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+Warning: There are more than one file for the same case. Please verify query results. You can use the command View(getResults(query)) in rstudio
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-THCA
+Of the 379 files for download 379 already exist.
+All samples have been already downloaded
+
+
+|    |cases            |experimental_strategy       |
+|:---|:----------------|:---------------------------|
+|149 |TCGA-CE-A3MD-01A |Reverse Phase Protein Array |
+|247 |TCGA-CE-A3MD-01A |Reverse Phase Protein Array |
+|68  |TCGA-FY-A3ON-01A |Reverse Phase Protein Array |
+|164 |TCGA-FY-A3ON-01A |Reverse Phase Protein Array |
+[2026-09-27 12:37:00] WARNING [fetch] GDCprepare failed for RPPA (There are samples duplicated. We will not be able to prepare it); reading the downloaded files directly
+[2026-09-27 12:37:00] Fetch: saved /Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-THCA_rppa.rds (487 antibodies x 377 samples)
+[2026-09-27 12:37:01] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 12:37:01] INFO [features] 30/487 antibodies dropped for >30% missing values
+[2026-09-27 12:37:01] INFO [features] 240 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 12:37:01] Endpoint PFI (auto); 377 samples; 457 genes modelled
+[2026-09-27 12:37:01] WARNING [power] Underpowered: 31 train events, 9 test events
+[2026-09-27 12:37:01] INFO [clinical] stage_group: merged rare levels into Other: Unknown
+[2026-09-27 12:37:01] Continuous per-gene Cox on 457 genes
+[2026-09-27 12:37:01] Gene Cox: 45/457
+[2026-09-27 12:37:02] Gene Cox: 90/457
+[2026-09-27 12:37:02] Gene Cox: 135/457
+[2026-09-27 12:37:02] Gene Cox: 180/457
+[2026-09-27 12:37:02] Gene Cox: 225/457
+[2026-09-27 12:37:02] Gene Cox: 270/457
+[2026-09-27 12:37:02] Gene Cox: 315/457
+[2026-09-27 12:37:02] Gene Cox: 360/457
+[2026-09-27 12:37:02] Gene Cox: 405/457
+[2026-09-27 12:37:02] Gene Cox: 450/457
+[2026-09-27 12:37:02] CPSM Univariate_sig_features_f
+[2026-09-27 12:37:03] CPSM Lasso_PI_scores_f
+[2026-09-27 12:37:06] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-27 12:37:35] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 12:37:54] MTLR Model3_PI_Clinical (Model_type=3, 4 features)
+[2026-09-27 12:38:23] MTLR Model4_Univariate_Clinical (Model_type=4, 13 features)
+The sampleTCGA-BJ-A0Z2-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 12:39:05] qc.json written: /Users/denverncube/work/CPSM_agent/results/THCA/rppa/qc.json (status=success)

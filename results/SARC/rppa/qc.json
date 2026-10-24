@@ -1,0 +1,139 @@
+{
+  "cohort": "SARC",
+  "name": "Sarcoma",
+  "status": "success",
+  "started": "2026-09-27 02:09:46",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 223,
+      "events": 84,
+      "rate": 0.376681614349776
+    },
+    {
+      "endpoint": "PFI",
+      "n": 223,
+      "events": 118,
+      "rate": 0.52914798206278
+    }
+  ],
+  "n_genes_after_filter": 457,
+  "n_genes_modelled": 457,
+  "n_samples": 222,
+  "n_events": 84,
+  "gene_column_trace": {
+    "combined_input": 457,
+    "after_data_process_f": 457,
+    "after_tr_test_f": 457,
+    "Train_Norm_data": 457,
+    "Test_Norm_data": 457
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 177,
+  "n_test": 45,
+  "train_events": 64,
+  "test_events": 20,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 77,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 7,
+  "model4_genes": ["AMPKALPHA", "CRAF", "X4EBP1", "SOD2", "MSH6", "S6", "EIF4G", "Melanoma.gp100", "EIF4E", "RBM15"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model2",
+  "best_test_c_index": 0.62,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.63,
+      "Train_Mean_MAE": 48.13,
+      "Train_Median_MAE": 42.74,
+      "Train_IBS": 0.244,
+      "Test_C_index": 0.51,
+      "Test_Mean_MAE": 50.79,
+      "Test_Median_MAE": 41.05,
+      "Test_IBS": 0.213
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.78,
+      "Train_Mean_MAE": 59.27,
+      "Train_Median_MAE": 38.29,
+      "Train_IBS": 0.15,
+      "Test_C_index": 0.62,
+      "Test_Mean_MAE": 59.38,
+      "Test_Median_MAE": 52.23,
+      "Test_IBS": 0.227
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 50.8,
+      "Train_Median_MAE": 40.64,
+      "Train_IBS": 0.172,
+      "Test_C_index": 0.61,
+      "Test_Mean_MAE": 53.06,
+      "Test_Median_MAE": 41.13,
+      "Test_IBS": 0.205
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.76,
+      "Train_Mean_MAE": 50.65,
+      "Train_Median_MAE": 45.7,
+      "Train_IBS": 0.19,
+      "Test_C_index": 0.59,
+      "Test_Mean_MAE": 53.69,
+      "Test_Median_MAE": 40.61,
+      "Test_IBS": 0.208
+    }
+  ],
+  "n_genes_p05": 98,
+  "n_genes_fdr05": 13,
+  "n_genes_fdr05_test_direction_agrees": 11,
+  "n_genes_ph_violation": 30,
+  "cpsm_median_split_minority_fraction_median": 0.497175141242938,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:10:42",
+  "runtime_min": 0.9,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "30/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_type: merged rare levels into Other: Sarcoma; synovial; poorly differentiated; Synovial Sarcoma - Biphasic; Synovial Sarcoma - Monophasic"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_type: test levels unseen in train (Giant cell 'MFH' / Undifferentiated pleomorphic sarcoma with giant cells) -> Other"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

@@ -1,0 +1,5 @@
+[01:04:58] STAD/plots waiting for an R slot (max 2)
+[01:04:58] slot 1 acquired
+[2026-09-27 01:05:00] Cohort STAD | platform rna | stage plots | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:05:01] Plots rewritten in /Users/denverncube/work/CPSM_agent/results/STAD/plots
+[2026-09-27 01:05:01] qc.json written: /Users/denverncube/work/CPSM_agent/results/STAD/qc.json (status=success)

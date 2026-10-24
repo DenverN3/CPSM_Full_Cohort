@@ -1,0 +1,123 @@
+{
+  "cohort": "UCEC",
+  "name": "Uterine corpus endometrial carcinoma",
+  "status": "success",
+  "started": "2026-09-15 22:20:38",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 543,
+      "events": 91,
+      "rate": 0.167587476979742
+    },
+    {
+      "endpoint": "PFI",
+      "n": 543,
+      "events": 124,
+      "rate": 0.228360957642726
+    }
+  ],
+  "n_genes_after_filter": 38580,
+  "n_genes_modelled": 5000,
+  "n_samples": 532,
+  "n_events": 91,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 5000,
+    "Test_Norm_data": 5000
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 425,
+  "n_test": 107,
+  "train_events": 77,
+  "test_events": 14,
+  "underpowered": false,
+  "model_covariates": ["Age", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 1180,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 21,
+  "model4_genes": ["ENSG00000139044.12", "ENSG00000142494.13", "ENSG00000133216.17", "ENSG00000130707.18", "ENSG00000147889.18", "ENSG00000211772.11", "ENSG00000277734.8", "ENSG00000124939.6", "ENSG00000163462.18", "ENSG00000261652.3"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.77,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.75,
+      "Train_Mean_MAE": 136.16,
+      "Train_Median_MAE": 143.06,
+      "Train_IBS": 0.229,
+      "Test_C_index": 0.77,
+      "Test_Mean_MAE": 138.02,
+      "Test_Median_MAE": 143.62,
+      "Test_IBS": 0.276
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 192.12,
+      "Train_Median_MAE": 183.35,
+      "Train_IBS": 0.162,
+      "Test_C_index": 0.59,
+      "Test_Mean_MAE": 201.57,
+      "Test_Median_MAE": 176.96,
+      "Test_IBS": 0.396
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.83,
+      "Train_Mean_MAE": 205.68,
+      "Train_Median_MAE": 188.56,
+      "Train_IBS": 0.166,
+      "Test_C_index": 0.68,
+      "Test_Mean_MAE": 206.68,
+      "Test_Median_MAE": 179.64,
+      "Test_IBS": 0.365
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 149.59,
+      "Train_Median_MAE": 149.4,
+      "Train_IBS": 0.197,
+      "Test_C_index": 0.75,
+      "Test_Mean_MAE": 150.54,
+      "Test_Median_MAE": 151.11,
+      "Test_IBS": 0.309
+    }
+  ],
+  "n_genes_p05": 1489,
+  "n_genes_fdr05": 575,
+  "n_genes_fdr05_test_direction_agrees": 473,
+  "n_genes_ph_violation": 293,
+  "cpsm_median_split_minority_fraction_median": 0.498823529411765,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 22:24:28",
+  "runtime_min": 3.8,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:05:10"
+}

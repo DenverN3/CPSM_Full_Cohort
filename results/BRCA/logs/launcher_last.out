@@ -1,0 +1,7 @@
+== BRCA/all exit=1 log=/Users/denverncube/work/CPSM_agent/results/BRCA/logs/all_20260916_085935.log
+[2026-09-16 09:19:00] FAILED: There was an error in the download process (we might had a connection problem with GDC server).
+[2026-09-16 09:19:00] qc.json written: /Users/denverncube/work/CPSM_agent/results/BRCA/qc.json (status=failed)
+== BRCA/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/BRCA/logs/all_20260916_114955.log
+[2026-09-16 11:58:26] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-16 11:58:32] Endpoint OS (configured); 1080 samples; 5000 genes modelled
+[2026-09-16 12:08:39] qc.json written: /Users/denverncube/work/CPSM_agent/results/BRCA/qc.json (status=success)

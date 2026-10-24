@@ -1,0 +1,125 @@
+{
+  "cohort": "PCPG",
+  "name": "Pheochromocytoma and paraganglioma",
+  "status": "partial",
+  "started": "2026-09-27 22:40:00",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 79,
+      "events": 2,
+      "rate": 0.0253164556962025
+    },
+    {
+      "endpoint": "PFI",
+      "n": 79,
+      "events": 7,
+      "rate": 0.0886075949367089
+    }
+  ],
+  "n_genes_after_filter": 457,
+  "n_genes_modelled": 457,
+  "n_samples": 79,
+  "n_events": 7,
+  "gene_column_trace": {
+    "combined_input": 457,
+    "after_data_process_f": 457,
+    "after_tr_test_f": 457,
+    "Train_Norm_data": 457,
+    "Test_Norm_data": 457
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 63,
+  "n_test": 16,
+  "train_events": 7,
+  "test_events": 0,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 1,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 0,
+  "model4_genes": "CYCLINB1",
+  "models_built": ["Model1", "Model4"],
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.66,
+      "Train_Mean_MAE": 162.51,
+      "Train_Median_MAE": 167.74,
+      "Train_IBS": 0.147,
+      "Test_C_index": null,
+      "Test_Mean_MAE": 160.85,
+      "Test_Median_MAE": 161.98,
+      "Test_IBS": 0.01
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.73,
+      "Train_Mean_MAE": 184.85,
+      "Train_Median_MAE": 183.74,
+      "Train_IBS": 0.138,
+      "Test_C_index": null,
+      "Test_Mean_MAE": 158.68,
+      "Test_Median_MAE": 143.96,
+      "Test_IBS": 0.009
+    }
+  ],
+  "n_genes_p05": 37,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 19,
+  "cpsm_median_split_minority_fraction_median": 0.46031746031746,
+  "n_issue_errors": 1,
+  "finished": "2026-09-27 22:40:08",
+  "runtime_min": 0.1,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "30/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 7 events (rate 0.089)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 7 train events, 0 test events"
+    },
+    {
+      "stage": "lasso",
+      "severity": "error",
+      "message": "x should be a matrix with 2 or more columns"
+    },
+    {
+      "stage": "model",
+      "severity": "warning",
+      "message": "Models 2 and 3 skipped: LASSO unavailable"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

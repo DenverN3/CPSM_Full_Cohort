@@ -1,0 +1,5 @@
+[01:04:24] KIRP/plots waiting for an R slot (max 2)
+[01:04:24] slot 1 acquired
+[2026-09-27 01:04:26] Cohort KIRP | platform rna | stage plots | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:04:27] Plots rewritten in /Users/denverncube/work/CPSM_agent/results/KIRP/plots
+[2026-09-27 01:04:27] qc.json written: /Users/denverncube/work/CPSM_agent/results/KIRP/qc.json (status=success)

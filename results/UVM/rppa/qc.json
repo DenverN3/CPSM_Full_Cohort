@@ -1,0 +1,27 @@
+{
+  "cohort": "UVM",
+  "platform": "rppa",
+  "stage": "all",
+  "status": "failed",
+  "error": "Only 12 samples with a valid PFI endpoint",
+  "traceback": ["tryCatch(withCallingHandlers({", "tryCatchList(expr, classes, parentenv, handlers)", "tryCatchOne(expr, names, parentenv, handlers[[1L]])", "doTryCatch(return(expr), name, parentenv, handler)", "withCallingHandlers({", "analyze_cohort(code, root, pcfg, cfg, paths, issues)", "build_analysis_frame_platform(src, cdr, cfg, pcfg, issues)", "stop(sprintf(\"Only %d samples with a valid %s endpoint\", nrow(out), ", ".handleSimpleError(function (e) ", "h(simpleError(msg, call))"],
+  "finished": "2026-09-27 02:00:25",
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "30/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "240 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 4 events (rate 0.333)"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

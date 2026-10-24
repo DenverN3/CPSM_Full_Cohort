@@ -1,0 +1,7 @@
+== ACC_rppa/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/ACC/rppa/logs/all_20260927_013114.log
+[2026-09-27 01:31:35] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 01:31:35] WARNING [endpoint] No auto candidate met thresholds; using PFI with 26 events (rate 0.565)
+[2026-09-27 01:31:35] Endpoint PFI (auto); 46 samples; 458 genes modelled
+[2026-09-27 01:31:35] ERROR [genes] combined_input: 458 gene columns missing NOT explained by the CPSM near-constant filter (X1433BETA, X1433EPSILON, X1433ZETA, X4EBP1, X4EBP1_pS65, X4EBP1_pT37T46, X4EBP1_pT70, X53BP1, ACC_pS79, ACC1)
+[2026-09-27 01:31:35] WARNING [power] Underpowered: 21 train events, 4 test events
+[2026-09-27 01:31:44] qc.json written: /Users/denverncube/work/CPSM_agent/results/ACC/rppa/qc.json (status=partial)

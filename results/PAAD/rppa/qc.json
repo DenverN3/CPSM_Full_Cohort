@@ -1,0 +1,143 @@
+{
+  "cohort": "PAAD",
+  "name": "Pancreatic adenocarcinoma",
+  "status": "success",
+  "started": "2026-09-27 02:11:27",
+  "locked": true,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "OS",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "configured",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 120,
+      "events": 70,
+      "rate": 0.583333333333333
+    }
+  ],
+  "n_genes_after_filter": 458,
+  "n_genes_modelled": 458,
+  "n_samples": 118,
+  "n_events": 69,
+  "gene_column_trace": {
+    "combined_input": 458,
+    "after_data_process_f": 458,
+    "after_tr_test_f": 458,
+    "Train_Norm_data": 458,
+    "Test_Norm_data": 458
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 94,
+  "n_test": 24,
+  "train_events": 61,
+  "test_events": 8,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 51,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 3,
+  "model4_genes": ["MRAP", "SMAC", "BAK", "FIBRONECTIN", "IR.b", "Caspase.8.cleaved", "DIRAS3", "IGF1R_pY1135Y1136", "BRCA2", "CD20"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.72,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.57,
+      "Train_Mean_MAE": 10.49,
+      "Train_Median_MAE": 6.4,
+      "Train_IBS": 0.184,
+      "Test_C_index": 0.57,
+      "Test_Mean_MAE": 9.54,
+      "Test_Median_MAE": 7.69,
+      "Test_IBS": 0.448
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.69,
+      "Train_Mean_MAE": 9.6,
+      "Train_Median_MAE": 6.59,
+      "Train_IBS": 0.142,
+      "Test_C_index": 0.65,
+      "Test_Mean_MAE": 10.2,
+      "Test_Median_MAE": 7,
+      "Test_IBS": 0.418
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.71,
+      "Train_Mean_MAE": 9.63,
+      "Train_Median_MAE": 6.07,
+      "Train_IBS": 0.154,
+      "Test_C_index": 0.72,
+      "Test_Mean_MAE": 9.35,
+      "Test_Median_MAE": 6.91,
+      "Test_IBS": 0.42
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.71,
+      "Train_Mean_MAE": 10.07,
+      "Train_Median_MAE": 8.51,
+      "Train_IBS": 0.155,
+      "Test_C_index": 0.43,
+      "Test_Mean_MAE": 9.44,
+      "Test_Median_MAE": 6.17,
+      "Test_IBS": 0.522
+    }
+  ],
+  "n_genes_p05": 64,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 30,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:11:45",
+  "runtime_min": 0.3,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "29/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "497 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 61 train events, 8 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Stage III; Stage IV"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: test levels unseen in train (Unknown) -> Other"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

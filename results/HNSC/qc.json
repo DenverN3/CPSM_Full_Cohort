@@ -1,0 +1,130 @@
+{
+  "cohort": "HNSC",
+  "name": "Head and neck squamous cell carcinoma",
+  "status": "success",
+  "started": "2026-09-16 08:58:46",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 519,
+      "events": 220,
+      "rate": 0.423892100192678
+    },
+    {
+      "endpoint": "PFI",
+      "n": 519,
+      "events": 197,
+      "rate": 0.379576107899807
+    }
+  ],
+  "n_genes_after_filter": 38548,
+  "n_genes_modelled": 5000,
+  "n_samples": 513,
+  "n_events": 216,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 4999,
+    "Test_Norm_data": 4999
+  },
+  "gene_drops": [
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000170516.17",
+      "train_modal_value_fraction": 0.815,
+      "explained_by_cpsm_near_constant_filter": true
+    }
+  ],
+  "n_genes_removed_by_cpsm_filter": 1,
+  "n_train": 410,
+  "n_test": 103,
+  "train_events": 177,
+  "test_events": 39,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 985,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 42,
+  "model4_genes": ["ENSG00000271375.1", "ENSG00000107984.10", "ENSG00000251039.2", "ENSG00000125910.6", "ENSG00000114200.10", "ENSG00000223350.2", "ENSG00000170689.10", "ENSG00000131941.8", "ENSG00000163661.4", "ENSG00000211942.3"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.64,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.61,
+      "Train_Mean_MAE": 36.28,
+      "Train_Median_MAE": 29.82,
+      "Train_IBS": 0.189,
+      "Test_C_index": 0.56,
+      "Test_Mean_MAE": 33.15,
+      "Test_Median_MAE": 27.85,
+      "Test_IBS": 0.295
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 41.92,
+      "Train_Median_MAE": 24.7,
+      "Train_IBS": 0.133,
+      "Test_C_index": 0.62,
+      "Test_Mean_MAE": 37.26,
+      "Test_Median_MAE": 28.61,
+      "Test_IBS": 0.292
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 41.46,
+      "Train_Median_MAE": 26,
+      "Train_IBS": 0.125,
+      "Test_C_index": 0.63,
+      "Test_Mean_MAE": 37.62,
+      "Test_Median_MAE": 29.32,
+      "Test_IBS": 0.285
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.71,
+      "Train_Mean_MAE": 36.64,
+      "Train_Median_MAE": 32.25,
+      "Train_IBS": 0.171,
+      "Test_C_index": 0.64,
+      "Test_Mean_MAE": 31.12,
+      "Test_Median_MAE": 22.21,
+      "Test_IBS": 0.278
+    }
+  ],
+  "n_genes_p05": 1267,
+  "n_genes_fdr05": 456,
+  "n_genes_fdr05_test_direction_agrees": 385,
+  "n_genes_ph_violation": 530,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-16 09:02:01",
+  "runtime_min": 3.3,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:20"
+}

@@ -1,0 +1,5 @@
+[01:04:10] DLBC/plots waiting for an R slot (max 2)
+[01:04:10] slot 1 acquired
+[2026-09-27 01:04:12] Cohort DLBC | platform rna | stage plots | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:04:13] Plots rewritten in /Users/denverncube/work/CPSM_agent/results/DLBC/plots
+[2026-09-27 01:04:13] qc.json written: /Users/denverncube/work/CPSM_agent/results/DLBC/qc.json (status=success)

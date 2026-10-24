@@ -1,0 +1,139 @@
+{
+  "cohort": "KIRP",
+  "name": "Kidney renal papillary cell carcinoma",
+  "status": "success",
+  "started": "2026-09-27 02:14:35",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 214,
+      "events": 32,
+      "rate": 0.149532710280374
+    },
+    {
+      "endpoint": "PFI",
+      "n": 212,
+      "events": 47,
+      "rate": 0.221698113207547
+    }
+  ],
+  "n_genes_after_filter": 457,
+  "n_genes_modelled": 457,
+  "n_samples": 207,
+  "n_events": 47,
+  "gene_column_trace": {
+    "combined_input": 457,
+    "after_data_process_f": 457,
+    "after_tr_test_f": 457,
+    "Train_Norm_data": 457,
+    "Test_Norm_data": 457
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 165,
+  "n_test": 42,
+  "train_events": 38,
+  "test_events": 9,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 57,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 16,
+  "model4_genes": ["X1433EPSILON", "PI3K.p110.b", "NDUFB4", "RB_pS807S811", "CMET", "SMAD4", "X4EBP1_pS65", "X53BP1", "GSK3ALPHABETA_pS21S9", "CMYC"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.85,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.76,
+      "Train_Mean_MAE": 89,
+      "Train_Median_MAE": 99.77,
+      "Train_IBS": 0.281,
+      "Test_C_index": 0.85,
+      "Test_Mean_MAE": 83.92,
+      "Test_Median_MAE": 91.97,
+      "Test_IBS": 0.212
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 146.22,
+      "Train_Median_MAE": 99.5,
+      "Train_IBS": 0.122,
+      "Test_C_index": 0.68,
+      "Test_Mean_MAE": 149.56,
+      "Test_Median_MAE": 109.58,
+      "Test_IBS": 0.304
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.91,
+      "Train_Mean_MAE": 154.97,
+      "Train_Median_MAE": 141.45,
+      "Train_IBS": 0.141,
+      "Test_C_index": 0.71,
+      "Test_Mean_MAE": 159.09,
+      "Test_Median_MAE": 163.79,
+      "Test_IBS": 0.22
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.85,
+      "Train_Mean_MAE": 99.3,
+      "Train_Median_MAE": 99.67,
+      "Train_IBS": 0.255,
+      "Test_C_index": 0.77,
+      "Test_Mean_MAE": 92.23,
+      "Test_Median_MAE": 97.01,
+      "Test_IBS": 0.22
+    }
+  ],
+  "n_genes_p05": 81,
+  "n_genes_fdr05": 8,
+  "n_genes_fdr05_test_direction_agrees": 7,
+  "n_genes_ph_violation": 29,
+  "cpsm_median_split_minority_fraction_median": 0.496969696969697,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:19:50",
+  "runtime_min": 5.2,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "30/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "247 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 38 train events, 9 test events"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

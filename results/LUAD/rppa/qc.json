@@ -1,0 +1,116 @@
+{
+  "cohort": "LUAD",
+  "name": "Lung adenocarcinoma",
+  "status": "partial",
+  "started": "2026-09-27 01:47:28",
+  "locked": true,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "OS",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "configured",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 354,
+      "events": 141,
+      "rate": 0.398305084745763
+    }
+  ],
+  "n_genes_after_filter": 455,
+  "n_genes_modelled": 455,
+  "n_samples": 349,
+  "n_events": 140,
+  "gene_column_trace": {
+    "combined_input": 455,
+    "after_data_process_f": 455,
+    "after_tr_test_f": 455,
+    "Train_Norm_data": 455,
+    "Test_Norm_data": 455
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 279,
+  "n_test": 70,
+  "train_events": 113,
+  "test_events": 27,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 26,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 0,
+  "model4_genes": ["PAI1", "CYCLINB1", "PLK1", "PTEN", "Stat3", "CYCLINE1", "Grp75", "TUBERIN_pT1462", "c.Abl_pY412", "FOXM1"],
+  "models_built": ["Model1", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.62,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.7,
+      "Train_Mean_MAE": 30.86,
+      "Train_Median_MAE": 23.44,
+      "Train_IBS": 0.177,
+      "Test_C_index": 0.62,
+      "Test_Mean_MAE": 31.86,
+      "Test_Median_MAE": 25.54,
+      "Test_IBS": 0.237
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.72,
+      "Train_Mean_MAE": 31.13,
+      "Train_Median_MAE": 25.09,
+      "Train_IBS": 0.174,
+      "Test_C_index": 0.53,
+      "Test_Mean_MAE": 34.84,
+      "Test_Median_MAE": 27.15,
+      "Test_IBS": 0.252
+    }
+  ],
+  "n_genes_p05": 31,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 34,
+  "cpsm_median_split_minority_fraction_median": 0.498207885304659,
+  "n_issue_errors": 1,
+  "finished": "2026-09-27 01:48:19",
+  "runtime_min": 0.8,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "32/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "2629 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "lasso",
+      "severity": "error",
+      "message": "x should be a matrix with 2 or more columns"
+    },
+    {
+      "stage": "model",
+      "severity": "warning",
+      "message": "Models 2 and 3 skipped: LASSO unavailable"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

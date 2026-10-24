@@ -1,0 +1,32 @@
+[03:34:42] COAD_rppa/all waiting for an R slot (max 2)
+[03:34:42] slot 1 acquired
+[2026-09-27 03:34:43] Cohort COAD | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 03:34:43] Fetch: cached RPPA matrix exists (/Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-COAD_rppa.rds); skipping
+[2026-09-27 03:34:44] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 03:34:44] INFO [features] 25/487 antibodies dropped for >30% missing values
+[2026-09-27 03:34:44] INFO [features] 2832 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 03:34:44] INFO [samples] 2 samples without a TCGA-CDR record removed
+[2026-09-27 03:34:45] Endpoint OS (configured); 346 samples; 462 genes modelled
+[2026-09-27 03:34:45] INFO [clinical] stage_group: merged rare levels into Other: Unknown
+[2026-09-27 03:34:45] Continuous per-gene Cox on 462 genes
+[2026-09-27 03:34:45] Gene Cox: 46/462
+[2026-09-27 03:34:45] Gene Cox: 92/462
+[2026-09-27 03:34:45] Gene Cox: 138/462
+[2026-09-27 03:34:45] Gene Cox: 184/462
+[2026-09-27 03:34:45] Gene Cox: 230/462
+[2026-09-27 03:34:45] Gene Cox: 276/462
+[2026-09-27 03:34:45] Gene Cox: 322/462
+[2026-09-27 03:34:45] Gene Cox: 368/462
+[2026-09-27 03:34:45] Gene Cox: 414/462
+[2026-09-27 03:34:45] Gene Cox: 460/462
+[2026-09-27 03:34:45] CPSM Univariate_sig_features_f
+[2026-09-27 03:34:46] CPSM Lasso_PI_scores_f
+[2026-09-27 03:34:49] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-27 03:35:13] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 03:35:29] MTLR Model3_PI_Clinical (Model_type=3, 4 features)
+[2026-09-27 03:35:52] MTLR Model4_Univariate_Clinical (Model_type=4, 13 features)
+The sampleTCGA-5M-AAT6-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 03:36:24] qc.json written: /Users/denverncube/work/CPSM_agent/results/COAD/rppa/qc.json (status=success)

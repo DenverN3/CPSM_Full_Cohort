@@ -1,0 +1,149 @@
+{
+  "cohort": "READ",
+  "name": "Rectum adenocarcinoma",
+  "status": "success",
+  "started": "2026-09-27 02:02:27",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 125,
+      "events": 26,
+      "rate": 0.208
+    },
+    {
+      "endpoint": "PFI",
+      "n": 124,
+      "events": 30,
+      "rate": 0.241935483870968
+    }
+  ],
+  "n_genes_after_filter": 462,
+  "n_genes_modelled": 462,
+  "n_samples": 124,
+  "n_events": 30,
+  "gene_column_trace": {
+    "combined_input": 462,
+    "after_data_process_f": 462,
+    "after_tr_test_f": 462,
+    "Train_Norm_data": 462,
+    "Test_Norm_data": 462
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 99,
+  "n_test": 25,
+  "train_events": 24,
+  "test_events": 6,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 12,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 17,
+  "model4_genes": ["ARAF_pS299", "HSP27", "DM.K9.Histone.H3", "CMYC", "P38MAPK", "SRC_pY416", "IMP3", "Enolase.1", "IDO", "Glutaminase"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model2",
+  "best_test_c_index": 0.48,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.68,
+      "Train_Mean_MAE": 25.93,
+      "Train_Median_MAE": 22.68,
+      "Train_IBS": 0.216,
+      "Test_C_index": 0.39,
+      "Test_Mean_MAE": 22.06,
+      "Test_Median_MAE": 24.05,
+      "Test_IBS": 0.251
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.92,
+      "Train_Mean_MAE": 58.19,
+      "Train_Median_MAE": 24.66,
+      "Train_IBS": 0.13,
+      "Test_C_index": 0.48,
+      "Test_Mean_MAE": 52.07,
+      "Test_Median_MAE": 35.92,
+      "Test_IBS": 0.662
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.96,
+      "Train_Mean_MAE": 39.23,
+      "Train_Median_MAE": 30.28,
+      "Train_IBS": 0.122,
+      "Test_C_index": 0.44,
+      "Test_Mean_MAE": 39.82,
+      "Test_Median_MAE": 35.81,
+      "Test_IBS": 0.496
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.86,
+      "Train_Mean_MAE": 28.04,
+      "Train_Median_MAE": 26.61,
+      "Train_IBS": 0.18,
+      "Test_C_index": 0.31,
+      "Test_Mean_MAE": 29.62,
+      "Test_Median_MAE": 26.09,
+      "Test_IBS": 0.355
+    }
+  ],
+  "n_genes_p05": 28,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 8,
+  "cpsm_median_split_minority_fraction_median": 0.494949494949495,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:04:27",
+  "runtime_min": 2,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "25/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "1441 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "samples",
+      "severity": "info",
+      "message": "1 samples without a TCGA-CDR record removed"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 30 events (rate 0.242)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 24 train events, 6 test events"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

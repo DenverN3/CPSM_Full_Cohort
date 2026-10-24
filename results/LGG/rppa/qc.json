@@ -1,0 +1,139 @@
+{
+  "cohort": "LGG",
+  "name": "Brain lower grade glioma",
+  "status": "success",
+  "started": "2026-09-27 03:45:35",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "grade", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 424,
+      "events": 98,
+      "rate": 0.231132075471698
+    },
+    {
+      "endpoint": "PFI",
+      "n": 424,
+      "events": 151,
+      "rate": 0.356132075471698
+    }
+  ],
+  "n_genes_after_filter": 456,
+  "n_genes_modelled": 456,
+  "n_samples": 398,
+  "n_events": 97,
+  "gene_column_trace": {
+    "combined_input": 456,
+    "after_data_process_f": 456,
+    "after_tr_test_f": 456,
+    "Train_Norm_data": 456,
+    "Test_Norm_data": 456
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 318,
+  "n_test": 80,
+  "train_events": 76,
+  "test_events": 21,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "histological_grade", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 122,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 14,
+  "model4_genes": ["Glutamate.D1.2", "SCD1", "GCLC", "G6PD", "Cyclophilin.F", "GATA3", "TFAM", "P53", "ANNEXINVII", "CYCLINE1"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.82,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 54.59,
+      "Train_Median_MAE": 44.24,
+      "Train_IBS": 0.185,
+      "Test_C_index": 0.75,
+      "Test_Mean_MAE": 51.39,
+      "Test_Median_MAE": 42.45,
+      "Test_IBS": 0.175
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.86,
+      "Train_Mean_MAE": 67.22,
+      "Train_Median_MAE": 48.65,
+      "Train_IBS": 0.16,
+      "Test_C_index": 0.81,
+      "Test_Mean_MAE": 62.39,
+      "Test_Median_MAE": 46.02,
+      "Test_IBS": 0.212
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 55.89,
+      "Train_Median_MAE": 47.44,
+      "Train_IBS": 0.162,
+      "Test_C_index": 0.82,
+      "Test_Mean_MAE": 50.79,
+      "Test_Median_MAE": 37.75,
+      "Test_IBS": 0.172
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.82,
+      "Train_Mean_MAE": 56.55,
+      "Train_Median_MAE": 50.61,
+      "Train_IBS": 0.183,
+      "Test_C_index": 0.81,
+      "Test_Mean_MAE": 53.92,
+      "Test_Median_MAE": 39.82,
+      "Test_IBS": 0.17
+    }
+  ],
+  "n_genes_p05": 169,
+  "n_genes_fdr05": 130,
+  "n_genes_fdr05_test_direction_agrees": 127,
+  "n_genes_ph_violation": 88,
+  "cpsm_median_split_minority_fraction_median": 0.49685534591195,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:47:24",
+  "runtime_min": 1.8,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "31/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "samples",
+      "severity": "info",
+      "message": "1 samples without a TCGA-CDR record removed"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_grade: merged rare levels into Other: Unknown"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

@@ -1,0 +1,101 @@
+{
+  "cohort": "TGCT",
+  "name": "Testicular germ cell tumors",
+  "status": "partial",
+  "started": "2026-09-15 23:24:24",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 134,
+      "events": 4,
+      "rate": 0.0298507462686567
+    },
+    {
+      "endpoint": "PFI",
+      "n": 134,
+      "events": 35,
+      "rate": 0.261194029850746
+    }
+  ],
+  "n_genes_after_filter": 41489,
+  "n_genes_modelled": 5000,
+  "n_samples": 129,
+  "n_events": 33,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 5000,
+    "Test_Norm_data": 5000
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 103,
+  "n_test": 26,
+  "train_events": 28,
+  "test_events": 5,
+  "underpowered": true,
+  "model_covariates": ["Age", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 308,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 0,
+  "model4_genes": ["ENSG00000199506.1", "ENSG00000126603.9", "ENSG00000230715.3", "ENSG00000279211.1", "ENSG00000241081.1", "ENSG00000243679.1", "ENSG00000134824.14", "ENSG00000146374.14", "ENSG00000211649.3", "ENSG00000085741.13"],
+  "models_built": ["Model1", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.45,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.72,
+      "Train_Mean_MAE": 114.2,
+      "Train_Median_MAE": 116.06,
+      "Train_IBS": 0.193,
+      "Test_C_index": 0.44,
+      "Test_Mean_MAE": 101.87,
+      "Test_Median_MAE": 105.75,
+      "Test_IBS": 0.516
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.79,
+      "Train_Mean_MAE": 125.73,
+      "Train_Median_MAE": 122.16,
+      "Train_IBS": 0.161,
+      "Test_C_index": 0.45,
+      "Test_Mean_MAE": 128.88,
+      "Test_Median_MAE": 126.39,
+      "Test_IBS": 0.638
+    }
+  ],
+  "n_genes_p05": 350,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 923,
+  "cpsm_median_split_minority_fraction_median": 0.495145631067961,
+  "n_issue_errors": 1,
+  "finished": "2026-09-15 23:25:07",
+  "runtime_min": 0.7,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:05:03"
+}

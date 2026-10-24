@@ -1,0 +1,32 @@
+[03:55:45] BRCA_rppa/all waiting for an R slot (max 2)
+[03:55:45] slot 1 acquired
+[2026-09-27 03:55:47] Cohort BRCA | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 03:55:47] Fetch: cached RPPA matrix exists (/Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-BRCA_rppa.rds); skipping
+[2026-09-27 03:55:48] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 03:55:48] INFO [features] 24/487 antibodies dropped for >30% missing values
+[2026-09-27 03:55:48] INFO [features] 5124 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 03:55:48] INFO [samples] 1 samples without a TCGA-CDR record removed
+[2026-09-27 03:55:49] Endpoint OS (configured); 869 samples; 463 genes modelled
+[2026-09-27 03:55:49] INFO [clinical] subtype: merged rare levels into Other: Unknown
+[2026-09-27 03:55:49] Continuous per-gene Cox on 463 genes
+[2026-09-27 03:55:49] Gene Cox: 46/463
+[2026-09-27 03:55:49] Gene Cox: 92/463
+[2026-09-27 03:55:49] Gene Cox: 138/463
+[2026-09-27 03:55:49] Gene Cox: 184/463
+[2026-09-27 03:55:49] Gene Cox: 230/463
+[2026-09-27 03:55:49] Gene Cox: 276/463
+[2026-09-27 03:55:50] Gene Cox: 322/463
+[2026-09-27 03:55:50] Gene Cox: 368/463
+[2026-09-27 03:55:50] Gene Cox: 414/463
+[2026-09-27 03:55:50] Gene Cox: 460/463
+[2026-09-27 03:55:50] CPSM Univariate_sig_features_f
+[2026-09-27 03:55:51] CPSM Lasso_PI_scores_f
+[2026-09-27 03:56:02] MTLR Model1_Clinical (Model_type=1, 4 features)
+[2026-09-27 03:57:50] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 03:58:56] MTLR Model3_PI_Clinical (Model_type=3, 5 features)
+[2026-09-27 04:00:45] MTLR Model4_Univariate_Clinical (Model_type=4, 14 features)
+The sampleTCGA-A1-A0SJ-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 04:03:03] qc.json written: /Users/denverncube/work/CPSM_agent/results/BRCA/rppa/qc.json (status=success)

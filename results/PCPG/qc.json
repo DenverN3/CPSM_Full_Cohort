@@ -1,0 +1,123 @@
+{
+  "cohort": "PCPG",
+  "name": "Pheochromocytoma and paraganglioma",
+  "status": "success",
+  "started": "2026-09-15 21:50:45",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 179,
+      "events": 6,
+      "rate": 0.0335195530726257
+    },
+    {
+      "endpoint": "PFI",
+      "n": 178,
+      "events": 20,
+      "rate": 0.112359550561798
+    }
+  ],
+  "n_genes_after_filter": 37091,
+  "n_genes_modelled": 5000,
+  "n_samples": 175,
+  "n_events": 20,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 5000,
+    "Test_Norm_data": 5000
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 140,
+  "n_test": 35,
+  "train_events": 15,
+  "test_events": 5,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 247,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 11,
+  "model4_genes": ["ENSG00000157216.15", "ENSG00000188859.7", "ENSG00000256576.2", "ENSG00000133985.3", "ENSG00000110448.11", "ENSG00000171462.15", "ENSG00000117477.12", "ENSG00000146938.16", "ENSG00000167693.17", "ENSG00000125247.16"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model2",
+  "best_test_c_index": 0.8,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.53,
+      "Train_Mean_MAE": 115.96,
+      "Train_Median_MAE": 124.02,
+      "Train_IBS": 0.15,
+      "Test_C_index": 0.41,
+      "Test_Mean_MAE": 110.68,
+      "Test_Median_MAE": 119.84,
+      "Test_IBS": 0.227
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.97,
+      "Train_Mean_MAE": 560.17,
+      "Train_Median_MAE": 484.16,
+      "Train_IBS": 0.048,
+      "Test_C_index": 0.8,
+      "Test_Mean_MAE": 500.42,
+      "Test_Median_MAE": 521.82,
+      "Test_IBS": 0.19
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.97,
+      "Train_Mean_MAE": 237.31,
+      "Train_Median_MAE": 259.89,
+      "Train_IBS": 0.063,
+      "Test_C_index": 0.78,
+      "Test_Mean_MAE": 219.08,
+      "Test_Median_MAE": 242.5,
+      "Test_IBS": 0.157
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.86,
+      "Train_Mean_MAE": 136.75,
+      "Train_Median_MAE": 136.81,
+      "Train_IBS": 0.113,
+      "Test_C_index": 0.76,
+      "Test_Mean_MAE": 135.17,
+      "Test_Median_MAE": 134.77,
+      "Test_IBS": 0.231
+    }
+  ],
+  "n_genes_p05": 516,
+  "n_genes_fdr05": 5,
+  "n_genes_fdr05_test_direction_agrees": 3,
+  "n_genes_ph_violation": 354,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 21:51:41",
+  "runtime_min": 0.9,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:49"
+}

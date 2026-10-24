@@ -1,0 +1,5 @@
+[01:05:13] UVM/plots waiting for an R slot (max 2)
+[01:05:13] slot 1 acquired
+[2026-09-27 01:05:14] Cohort UVM | platform rna | stage plots | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:05:15] Plots rewritten in /Users/denverncube/work/CPSM_agent/results/UVM/plots
+[2026-09-27 01:05:15] qc.json written: /Users/denverncube/work/CPSM_agent/results/UVM/qc.json (status=success)

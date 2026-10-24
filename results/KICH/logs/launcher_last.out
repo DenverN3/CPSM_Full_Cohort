@@ -1,0 +1,6 @@
+== KICH/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/KICH/logs/all_20260915_212601.log
+[2026-09-15 22:09:44] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 22:09:44] WARNING [endpoint] No auto candidate met thresholds; using PFI with 11 events (rate 0.169)
+[2026-09-15 22:09:44] Endpoint PFI (auto); 65 samples; 5000 genes modelled
+[2026-09-15 22:09:45] WARNING [power] Underpowered: 8 train events, 3 test events
+[2026-09-15 22:10:17] qc.json written: /Users/denverncube/work/CPSM_agent/results/KICH/qc.json (status=success)

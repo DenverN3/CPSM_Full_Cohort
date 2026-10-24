@@ -1,0 +1,123 @@
+{
+  "cohort": "CESC",
+  "name": "Cervical squamous cell carcinoma and endocervical adenocarcinoma",
+  "status": "success",
+  "started": "2026-09-15 22:39:25",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 291,
+      "events": 71,
+      "rate": 0.243986254295533
+    },
+    {
+      "endpoint": "PFI",
+      "n": 291,
+      "events": 71,
+      "rate": 0.243986254295533
+    }
+  ],
+  "n_genes_after_filter": 38230,
+  "n_genes_modelled": 5000,
+  "n_samples": 279,
+  "n_events": 70,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 5000,
+    "Test_Norm_data": 5000
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 223,
+  "n_test": 56,
+  "train_events": 55,
+  "test_events": 15,
+  "underpowered": false,
+  "model_covariates": ["Age", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 725,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 11,
+  "model4_genes": ["ENSG00000169429.11", "ENSG00000186710.11", "ENSG00000125538.12", "ENSG00000143641.10", "ENSG00000158062.20", "ENSG00000158488.16", "ENSG00000168961.17", "ENSG00000173530.6", "ENSG00000145088.9", "ENSG00000199038.1"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.64,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.65,
+      "Train_Mean_MAE": 90.58,
+      "Train_Median_MAE": 105.94,
+      "Train_IBS": 0.228,
+      "Test_C_index": 0.64,
+      "Test_Mean_MAE": 102.69,
+      "Test_Median_MAE": 111.81,
+      "Test_IBS": 0.266
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.85,
+      "Train_Mean_MAE": 107.76,
+      "Train_Median_MAE": 107.52,
+      "Train_IBS": 0.154,
+      "Test_C_index": 0.57,
+      "Test_Mean_MAE": 113.44,
+      "Test_Median_MAE": 112.52,
+      "Test_IBS": 0.29
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.88,
+      "Train_Mean_MAE": 114.36,
+      "Train_Median_MAE": 106.28,
+      "Train_IBS": 0.139,
+      "Test_C_index": 0.61,
+      "Test_Mean_MAE": 128.54,
+      "Test_Median_MAE": 115.83,
+      "Test_IBS": 0.28
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.85,
+      "Train_Mean_MAE": 101.36,
+      "Train_Median_MAE": 98.93,
+      "Train_IBS": 0.177,
+      "Test_C_index": 0.59,
+      "Test_Mean_MAE": 111.2,
+      "Test_Median_MAE": 109.94,
+      "Test_IBS": 0.267
+    }
+  ],
+  "n_genes_p05": 1005,
+  "n_genes_fdr05": 181,
+  "n_genes_fdr05_test_direction_agrees": 120,
+  "n_genes_ph_violation": 634,
+  "cpsm_median_split_minority_fraction_median": 0.497757847533632,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 22:41:17",
+  "runtime_min": 1.9,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:05"
+}

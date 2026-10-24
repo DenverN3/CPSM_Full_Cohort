@@ -1,0 +1,30 @@
+[22:00:57] PRAD_rppa/all waiting for an R slot (max 2)
+[22:00:57] slot 1 acquired
+[2026-09-27 22:00:59] Cohort PRAD | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 22:00:59] Fetch: cached RPPA matrix exists (/Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-PRAD_rppa.rds); skipping
+[2026-09-27 22:01:00] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 22:01:00] INFO [features] 31/487 antibodies dropped for >30% missing values
+[2026-09-27 22:01:00] INFO [features] 717 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 22:01:08] Endpoint PFI (configured); 352 samples; 456 genes modelled
+[2026-09-27 22:01:08] Continuous per-gene Cox on 456 genes
+[2026-09-27 22:01:08] Gene Cox: 45/456
+[2026-09-27 22:01:08] Gene Cox: 90/456
+[2026-09-27 22:01:08] Gene Cox: 135/456
+[2026-09-27 22:01:08] Gene Cox: 180/456
+[2026-09-27 22:01:08] Gene Cox: 225/456
+[2026-09-27 22:01:08] Gene Cox: 270/456
+[2026-09-27 22:01:08] Gene Cox: 315/456
+[2026-09-27 22:01:09] Gene Cox: 360/456
+[2026-09-27 22:01:09] Gene Cox: 405/456
+[2026-09-27 22:01:09] Gene Cox: 450/456
+[2026-09-27 22:01:09] CPSM Univariate_sig_features_f
+[2026-09-27 22:01:09] CPSM Lasso_PI_scores_f
+[2026-09-27 22:01:13] MTLR Model1_Clinical (Model_type=1, 2 features)
+[2026-09-27 22:01:33] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 22:01:50] MTLR Model3_PI_Clinical (Model_type=3, 3 features)
+[2026-09-27 22:02:11] MTLR Model4_Univariate_Clinical (Model_type=4, 12 features)
+The sampleTCGA-2A-A8VV-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 22:02:40] qc.json written: /Users/denverncube/work/CPSM_agent/results/PRAD/rppa/qc.json (status=success)

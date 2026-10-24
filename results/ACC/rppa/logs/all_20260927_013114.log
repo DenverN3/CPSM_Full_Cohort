@@ -1,0 +1,66 @@
+[01:31:14] ACC_rppa/all waiting for an R slot (max 2)
+[01:31:14] slot 1 acquired
+[2026-09-27 01:31:15] Cohort ACC | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:31:16] Fetch: querying GDC for TCGA-ACC RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-ACC
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-ACC
+GDCdownload will download 46 files. A total of 991.276 KB
+Downloading chunk 1 of 5 (10 files, size = 209.023 KB) as Sun_Sep_27_01_31_21_2026_0.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading chunk 2 of 5 (10 files, size = 220.42 KB) as Sun_Sep_27_01_31_21_2026_1.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 3 of 5 (10 files, size = 220.541 KB) as Sun_Sep_27_01_31_21_2026_2.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 4 of 5 (10 files, size = 220.467 KB) as Sun_Sep_27_01_31_21_2026_3.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 5 of 5 (6 files, size = 120.825 KB) as Sun_Sep_27_01_31_21_2026_4.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 26 kB     Downloading: 26 kB     Downloading: 26 kB     Downloading: 26 kB     |                                                    |  0%                      |=                                                   |2.173913% ~4 s remaining  |==                                                  |4.347826% ~2 s remaining  |===                                                 |6.521739% ~1 s remaining  |====                                                |8.695652% ~1 s remaining  |=====                                               |10.86957% ~1 s remaining  |======                                              |13.04348% ~1 s remaining  |=======                                             |15.21739% ~1 s remaining  |=========                                           |17.3913% ~0 s remaining   |==========                                          |19.56522% ~0 s remaining  |===========                                         |21.73913% ~0 s remaining  |============                                        |23.91304% ~0 s remaining  |=============                                       |26.08696% ~0 s remaining  |==============                                      |28.26087% ~0 s remaining  |===============                                     |30.43478% ~0 s remaining  |================                                    |32.6087% ~0 s remaining   |==================                                  |34.78261% ~0 s remaining  |===================                                 |36.95652% ~0 s remaining  |====================                                |39.13043% ~0 s remaining  |=====================                               |41.30435% ~0 s remaining  |======================                              |43.47826% ~0 s remaining  |=======================                             |45.65217% ~0 s remaining  |========================                            |47.82609% ~0 s remaining  |==========================                          | 50% ~0 s remaining       |===========================                         |52.17391% ~0 s remaining  |============================                        |54.34783% ~0 s remaining  |=============================                       |56.52174% ~0 s remaining  |==============================                      |58.69565% ~0 s remaining  |===============================                     |60.86957% ~0 s remaining  |================================                    |63.04348% ~0 s remaining  |=================================                   |65.21739% ~0 s remaining  |===================================                 |67.3913% ~0 s remaining   |====================================                |69.56522% ~0 s remaining  |=====================================               |71.73913% ~0 s remaining  |======================================              |73.91304% ~0 s remaining  |=======================================             |76.08696% ~0 s remaining  |========================================            |78.26087% ~0 s remaining  |=========================================           |80.43478% ~0 s remaining  |==========================================          |82.6087% ~0 s remaining   |============================================        |84.78261% ~0 s remaining  |=============================================       |86.95652% ~0 s remaining  |==============================================      |89.13043% ~0 s remaining  |===============================================     |91.30435% ~0 s remaining  |================================================    |93.47826% ~0 s remaining  |=================================================   |95.65217% ~0 s remaining  |==================================================  |97.82609% ~0 s remaining  |====================================================|100% ~0 s remaining       |====================================================|100%                      Completed after 0 s 
+Some files have a  different number of proteins, we will introduce NA for the missing values
+[2026-09-27 01:31:34] Fetch: saved /Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-ACC_rppa.rds (487 antibodies x 46 samples)
+[2026-09-27 01:31:35] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 01:31:35] INFO [features] 29/487 antibodies dropped for >30% missing values
+[2026-09-27 01:31:35] INFO [features] 480 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 01:31:35] WARNING [endpoint] No auto candidate met thresholds; using PFI with 26 events (rate 0.565)
+[2026-09-27 01:31:35] Endpoint PFI (auto); 46 samples; 458 genes modelled
+[2026-09-27 01:31:35] ERROR [genes] combined_input: 458 gene columns missing NOT explained by the CPSM near-constant filter (X1433BETA, X1433EPSILON, X1433ZETA, X4EBP1, X4EBP1_pS65, X4EBP1_pT37T46, X4EBP1_pT70, X53BP1, ACC_pS79, ACC1)
+[2026-09-27 01:31:35] INFO [genes] Test_Norm_data gene set differs from train (test-only: ; train-only: X1433BETA, X1433EPSILON, X1433ZETA, X4EBP1, X4EBP1_pS65)
+[2026-09-27 01:31:35] WARNING [power] Underpowered: 21 train events, 4 test events
+[2026-09-27 01:31:35] INFO [clinical] stage_group: merged rare levels into Other: Stage I
+[2026-09-27 01:31:35] Continuous per-gene Cox on 458 genes
+[2026-09-27 01:31:35] Gene Cox: 45/458
+[2026-09-27 01:31:35] Gene Cox: 90/458
+[2026-09-27 01:31:35] Gene Cox: 135/458
+[2026-09-27 01:31:35] Gene Cox: 180/458
+[2026-09-27 01:31:35] Gene Cox: 225/458
+[2026-09-27 01:31:35] Gene Cox: 270/458
+[2026-09-27 01:31:36] Gene Cox: 315/458
+[2026-09-27 01:31:36] Gene Cox: 360/458
+[2026-09-27 01:31:36] Gene Cox: 405/458
+[2026-09-27 01:31:36] Gene Cox: 450/458
+[2026-09-27 01:31:36] CPSM Univariate_sig_features_f
+[2026-09-27 01:31:36] CPSM Lasso_PI_scores_f
+[2026-09-27 01:31:38] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-27 01:31:39] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 01:31:40] MTLR Model3_PI_Clinical (Model_type=3, 4 features)
+[2026-09-27 01:31:41] MTLR Model4_Univariate_Clinical (Model_type=4, 13 features)
+The sampleTCGA-OR-A5J7-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 01:31:44] qc.json written: /Users/denverncube/work/CPSM_agent/results/ACC/rppa/qc.json (status=partial)

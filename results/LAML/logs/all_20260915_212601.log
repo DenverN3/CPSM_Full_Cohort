@@ -1,0 +1,35 @@
+[21:26:01] LAML/all waiting for an R slot (max 2)
+[23:25:14] slot 1 acquired
+[2026-09-15 23:25:15] Cohort LAML | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-15 23:25:16] Fetch: querying GDC for TCGA-LAML STAR counts (Primary Blood Derived Cancer - Peripheral Blood)
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-LAML
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By workflow.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-LAML
+GDCdownload will download 151 files. A total of 639.823772 MB
+Downloading chunk 1 of 4 (50 files, size = 211.852417 MB) as Tue_Sep_15_23_25_25_2026_0.tar.gz
+At least one of the chunks download was not correct. We will retry
+Downloading chunk 1 of 4 (50 files, size = 211.852417 MB) as Tue_Sep_15_23_25_25_2026_0.tar.gz
+[2026-09-15 23:25:26] FAILED: There was an error in the download process (we might had a connection problem with GDC server).
+Please run this function it again.
+Try using method = `client` or setting files.per.chunk to a small number.
+[2026-09-15 23:25:26] qc.json written: /Users/denverncube/work/CPSM_agent/results/LAML/qc.json (status=failed)

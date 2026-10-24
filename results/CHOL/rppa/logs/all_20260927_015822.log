@@ -1,0 +1,62 @@
+[01:58:22] CHOL_rppa/all waiting for an R slot (max 2)
+[01:58:22] slot 1 acquired
+[2026-09-27 01:58:23] Cohort CHOL | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:58:24] Fetch: querying GDC for TCGA-CHOL RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-CHOL
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-CHOL
+GDCdownload will download 30 files. A total of 657.092 KB
+Downloading chunk 1 of 3 (10 files, size = 222.352 KB) as Sun_Sep_27_01_58_29_2026_0.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 43 kB     Downloading: 43 kB     Downloading: 43 kB     Downloading: 43 kB     Downloading: 43 kB     Downloading: 43 kB     Downloading chunk 2 of 3 (10 files, size = 210.755 KB) as Sun_Sep_27_01_58_29_2026_1.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 45 kB     Downloading: 45 kB     Downloading: 45 kB     Downloading: 45 kB     Downloading: 45 kB     Downloading: 45 kB     Downloading chunk 3 of 3 (10 files, size = 223.985 KB) as Sun_Sep_27_01_58_29_2026_2.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 44 kB     Downloading: 44 kB     Downloading: 44 kB     Downloading: 44 kB     Downloading: 44 kB     Downloading: 44 kB     |                                                    |  0%                      |=                                                   |3.333333% ~2 s remaining  |===                                                 |6.666667% ~1 s remaining  |=====                                               | 10% ~1 s remaining       |======                                              |13.33333% ~0 s remaining  |========                                            |16.66667% ~0 s remaining  |==========                                          | 20% ~0 s remaining       |============                                        |23.33333% ~0 s remaining  |=============                                       |26.66667% ~0 s remaining  |===============                                     | 30% ~0 s remaining       |=================                                   |33.33333% ~0 s remaining  |===================                                 |36.66667% ~0 s remaining  |====================                                | 40% ~0 s remaining       |======================                              |43.33333% ~0 s remaining  |========================                            |46.66667% ~0 s remaining  |==========================                          | 50% ~0 s remaining       |===========================                         |53.33333% ~0 s remaining  |=============================                       |56.66667% ~0 s remaining  |===============================                     | 60% ~0 s remaining       |================================                    |63.33333% ~0 s remaining  |==================================                  |66.66667% ~0 s remaining  |====================================                | 70% ~0 s remaining       |======================================              |73.33333% ~0 s remaining  |=======================================             |76.66667% ~0 s remaining  |=========================================           | 80% ~0 s remaining       |===========================================         |83.33333% ~0 s remaining  |=============================================       |86.66667% ~0 s remaining  |==============================================      | 90% ~0 s remaining       |================================================    |93.33333% ~0 s remaining  |==================================================  |96.66667% ~0 s remaining  |====================================================|100% ~0 s remaining       |====================================================|100%                      Completed after 0 s 
+Some files have a  different number of proteins, we will introduce NA for the missing values
+[2026-09-27 01:58:38] Fetch: saved /Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-CHOL_rppa.rds (487 antibodies x 30 samples)
+[2026-09-27 01:58:39] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 01:58:39] INFO [features] 31/487 antibodies dropped for >30% missing values
+[2026-09-27 01:58:39] INFO [features] 240 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 01:58:39] WARNING [endpoint] No auto candidate met thresholds; using PFI with 16 events (rate 0.533)
+[2026-09-27 01:58:39] Endpoint PFI (auto); 30 samples; 456 genes modelled
+[2026-09-27 01:58:39] WARNING [power] Underpowered: 11 train events, 5 test events
+[2026-09-27 01:58:39] INFO [clinical] stage_group: merged rare levels into Other: Stage II; Stage III; Stage IV
+[2026-09-27 01:58:39] Continuous per-gene Cox on 456 genes
+[2026-09-27 01:58:39] Gene Cox: 45/456
+[2026-09-27 01:58:39] Gene Cox: 90/456
+[2026-09-27 01:58:39] Gene Cox: 135/456
+[2026-09-27 01:58:39] Gene Cox: 180/456
+[2026-09-27 01:58:39] Gene Cox: 225/456
+[2026-09-27 01:58:39] Gene Cox: 270/456
+[2026-09-27 01:58:39] Gene Cox: 315/456
+[2026-09-27 01:58:39] Gene Cox: 360/456
+[2026-09-27 01:58:40] Gene Cox: 405/456
+[2026-09-27 01:58:40] Gene Cox: 450/456
+[2026-09-27 01:58:40] CPSM Univariate_sig_features_f
+[2026-09-27 01:58:40] CPSM Lasso_PI_scores_f
+[2026-09-27 01:58:42] ERROR [lasso] x should be a matrix with 2 or more columns
+[2026-09-27 01:58:42] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-27 01:58:42] WARNING [model] Models 2 and 3 skipped: LASSO unavailable
+[2026-09-27 01:58:42] MTLR Model4_Univariate_Clinical (Model_type=4, 13 features)
+The sampleTCGA-3X-AAV9-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 01:58:44] qc.json written: /Users/denverncube/work/CPSM_agent/results/CHOL/rppa/qc.json (status=partial)

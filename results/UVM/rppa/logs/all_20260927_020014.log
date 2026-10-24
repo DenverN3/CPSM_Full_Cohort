@@ -1,0 +1,38 @@
+[02:00:14] UVM_rppa/all waiting for an R slot (max 2)
+[02:00:14] slot 1 acquired
+[2026-09-27 02:00:15] Cohort UVM | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 02:00:16] Fetch: querying GDC for TCGA-UVM RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-UVM
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-UVM
+GDCdownload will download 12 files. A total of 252.968 KB
+Downloading chunk 1 of 2 (10 files, size = 208.884 KB) as Sun_Sep_27_02_00_21_2026_0.tar.gz
+Downloading: 7.9 kB     Downloading: 7.9 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading chunk 2 of 2 (2 files, size = 44.084 KB) as Sun_Sep_27_02_00_21_2026_1.tar.gz
+Downloading: 14 kB     Downloading: 14 kB     Downloading: 14 kB     Downloading: 14 kB     |                                                    |  0%                      |====                                                |8.333333% ~1 s remaining  |========                                            |16.66667% ~0 s remaining  |=============                                       | 25% ~0 s remaining       |=================                                   |33.33333% ~0 s remaining  |=====================                               |41.66667% ~0 s remaining  |==========================                          | 50% ~0 s remaining       |==============================                      |58.33333% ~0 s remaining  |==================================                  |66.66667% ~0 s remaining  |=======================================             | 75% ~0 s remaining       |===========================================         |83.33333% ~0 s remaining  |===============================================     |91.66667% ~0 s remaining  |====================================================|100% ~0 s remaining       |====================================================|100%                      Completed after 0 s 
+Some files have a  different number of proteins, we will introduce NA for the missing values
+[2026-09-27 02:00:25] Fetch: saved /Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-UVM_rppa.rds (487 antibodies x 12 samples)
+[2026-09-27 02:00:25] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 02:00:25] INFO [features] 30/487 antibodies dropped for >30% missing values
+[2026-09-27 02:00:25] INFO [features] 240 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 02:00:25] WARNING [endpoint] No auto candidate met thresholds; using PFI with 4 events (rate 0.333)
+[2026-09-27 02:00:25] FAILED: Only 12 samples with a valid PFI endpoint
+[2026-09-27 02:00:25] qc.json written: /Users/denverncube/work/CPSM_agent/results/UVM/rppa/qc.json (status=failed)

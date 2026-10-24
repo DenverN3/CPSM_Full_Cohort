@@ -1,0 +1,39 @@
+[03:55:30] THCA_rppa/all waiting for an R slot (max 2)
+[03:55:30] slot 2 acquired
+[2026-09-27 03:55:32] Cohort THCA | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 03:55:33] Fetch: querying GDC for TCGA-THCA RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-THCA
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+Warning: There are more than one file for the same case. Please verify query results. You can use the command View(getResults(query)) in rstudio
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-THCA
+Of the 379 files for download 379 already exist.
+All samples have been already downloaded
+
+
+|    |cases            |experimental_strategy       |
+|:---|:----------------|:---------------------------|
+|149 |TCGA-CE-A3MD-01A |Reverse Phase Protein Array |
+|247 |TCGA-CE-A3MD-01A |Reverse Phase Protein Array |
+|68  |TCGA-FY-A3ON-01A |Reverse Phase Protein Array |
+|164 |TCGA-FY-A3ON-01A |Reverse Phase Protein Array |
+[2026-09-27 03:55:51] FAILED: There are samples duplicated. We will not be able to prepare it
+[2026-09-27 03:55:51] qc.json written: /Users/denverncube/work/CPSM_agent/results/THCA/rppa/qc.json (status=failed)

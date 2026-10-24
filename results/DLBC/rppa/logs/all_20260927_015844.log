@@ -1,0 +1,59 @@
+[01:58:44] DLBC_rppa/all waiting for an R slot (max 2)
+[01:58:44] slot 1 acquired
+[2026-09-27 01:58:45] Cohort DLBC | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:58:46] Fetch: querying GDC for TCGA-DLBC RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-DLBC
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-DLBC
+GDCdownload will download 33 files. A total of 726.469 KB
+Downloading chunk 1 of 4 (10 files, size = 220.3 KB) as Sun_Sep_27_01_58_51_2026_0.tar.gz
+Downloading: 8.2 kB     Downloading: 8.2 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 2 of 4 (10 files, size = 220.157 KB) as Sun_Sep_27_01_58_51_2026_1.tar.gz
+Downloading: 8.2 kB     Downloading: 8.2 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 32 kB     Downloading: 32 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading chunk 3 of 4 (10 files, size = 219.937 KB) as Sun_Sep_27_01_58_51_2026_2.tar.gz
+Downloading: 8.2 kB     Downloading: 8.2 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 25 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading: 42 kB     Downloading chunk 4 of 4 (3 files, size = 66.075 KB) as Sun_Sep_27_01_58_51_2026_3.tar.gz
+Downloading: 16 kB     Downloading: 16 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     Downloading: 17 kB     |                                                    |  0%                      |=                                                   |3.030303% ~2 s remaining  |===                                                 |6.060606% ~1 s remaining  |====                                                |9.090909% ~1 s remaining  |======                                              |12.12121% ~0 s remaining  |=======                                             |15.15152% ~0 s remaining  |=========                                           |18.18182% ~0 s remaining  |===========                                         |21.21212% ~0 s remaining  |============                                        |24.24242% ~0 s remaining  |==============                                      |27.27273% ~0 s remaining  |===============                                     |30.30303% ~0 s remaining  |=================                                   |33.33333% ~0 s remaining  |==================                                  |36.36364% ~0 s remaining  |====================                                |39.39394% ~0 s remaining  |======================                              |42.42424% ~0 s remaining  |=======================                             |45.45455% ~0 s remaining  |=========================                           |48.48485% ~0 s remaining  |==========================                          |51.51515% ~0 s remaining  |============================                        |54.54545% ~0 s remaining  |=============================                       |57.57576% ~0 s remaining  |===============================                     |60.60606% ~0 s remaining  |=================================                   |63.63636% ~0 s remaining  |==================================                  |66.66667% ~0 s remaining  |====================================                |69.69697% ~0 s remaining  |=====================================               |72.72727% ~0 s remaining  |=======================================             |75.75758% ~0 s remaining  |========================================            |78.78788% ~0 s remaining  |==========================================          |81.81818% ~0 s remaining  |============================================        |84.84848% ~0 s remaining  |=============================================       |87.87879% ~0 s remaining  |===============================================     |90.90909% ~0 s remaining  |================================================    |93.93939% ~0 s remaining  |==================================================  |96.9697% ~0 s remaining   |====================================================|100% ~0 s remaining       |====================================================|100%                      Completed after 0 s 
+[2026-09-27 01:59:01] Fetch: saved /Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-DLBC_rppa.rds (487 antibodies x 33 samples)
+[2026-09-27 01:59:02] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 01:59:02] INFO [features] 31/487 antibodies dropped for >30% missing values
+[2026-09-27 01:59:02] WARNING [endpoint] No auto candidate met thresholds; using PFI with 7 events (rate 0.219)
+[2026-09-27 01:59:02] Endpoint PFI (auto); 32 samples; 456 genes modelled
+[2026-09-27 01:59:02] WARNING [power] Underpowered: 6 train events, 1 test events
+[2026-09-27 01:59:02] INFO [clinical] stage_group: merged rare levels into Other: Stage I; Stage III; Stage IV; Unknown
+[2026-09-27 01:59:02] Continuous per-gene Cox on 456 genes
+[2026-09-27 01:59:02] Gene Cox: 45/456
+[2026-09-27 01:59:02] Gene Cox: 90/456
+[2026-09-27 01:59:02] Gene Cox: 135/456
+[2026-09-27 01:59:02] Gene Cox: 180/456
+[2026-09-27 01:59:02] Gene Cox: 225/456
+[2026-09-27 01:59:02] Gene Cox: 270/456
+[2026-09-27 01:59:02] Gene Cox: 315/456
+[2026-09-27 01:59:02] Gene Cox: 360/456
+[2026-09-27 01:59:03] Gene Cox: 405/456
+[2026-09-27 01:59:03] Gene Cox: 450/456
+[2026-09-27 01:59:03] CPSM Univariate_sig_features_f
+[2026-09-27 01:59:03] CPSM Lasso_PI_scores_f
+[2026-09-27 01:59:05] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-27 01:59:06] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 01:59:06] MTLR Model3_PI_Clinical (Model_type=3, 4 features)
+[2026-09-27 01:59:06] WARNING [model] Model4 skipped: no CPSM univariate genes
+[2026-09-27 01:59:07] FAILED: attempt to select less than one element in get1index
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 01:59:07] qc.json written: /Users/denverncube/work/CPSM_agent/results/DLBC/rppa/qc.json (status=failed)

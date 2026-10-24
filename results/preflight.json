@@ -1,0 +1,168 @@
+{
+  "time": "2026-09-27 01:31:09",
+  "root": "/Users/denverncube/work/CPSM_agent",
+  "checks": [
+    {
+      "check": "r_version",
+      "ok": true,
+      "blocking": true,
+      "detail": "R version 4.6.1 (2026-06-24)"
+    },
+    {
+      "check": "pkg_ggrepel",
+      "ok": true,
+      "blocking": false,
+      "detail": "0.9.8"
+    },
+    {
+      "check": "pkg_CPSM",
+      "ok": true,
+      "blocking": true,
+      "detail": "1.4.0"
+    },
+    {
+      "check": "pkg_MTLR",
+      "ok": true,
+      "blocking": true,
+      "detail": "0.2.2"
+    },
+    {
+      "check": "pkg_TCGAbiolinks",
+      "ok": true,
+      "blocking": true,
+      "detail": "2.40.0"
+    },
+    {
+      "check": "pkg_SummarizedExperiment",
+      "ok": true,
+      "blocking": true,
+      "detail": "1.42.0"
+    },
+    {
+      "check": "pkg_survival",
+      "ok": true,
+      "blocking": true,
+      "detail": "3.8.11"
+    },
+    {
+      "check": "pkg_glmnet",
+      "ok": true,
+      "blocking": true,
+      "detail": "5.0"
+    },
+    {
+      "check": "pkg_preprocessCore",
+      "ok": true,
+      "blocking": true,
+      "detail": "1.74.0"
+    },
+    {
+      "check": "pkg_survminer",
+      "ok": true,
+      "blocking": true,
+      "detail": "0.5.2"
+    },
+    {
+      "check": "pkg_ggplot2",
+      "ok": true,
+      "blocking": true,
+      "detail": "4.0.3"
+    },
+    {
+      "check": "pkg_yaml",
+      "ok": true,
+      "blocking": true,
+      "detail": "2.3.12"
+    },
+    {
+      "check": "pkg_jsonlite",
+      "ok": true,
+      "blocking": true,
+      "detail": "2.0.0"
+    },
+    {
+      "check": "pkg_openxlsx",
+      "ok": true,
+      "blocking": true,
+      "detail": "4.2.8.1"
+    },
+    {
+      "check": "pkg_readxl",
+      "ok": true,
+      "blocking": true,
+      "detail": "1.5.0"
+    },
+    {
+      "check": "pkg_data.table",
+      "ok": true,
+      "blocking": true,
+      "detail": "1.18.4"
+    },
+    {
+      "check": "pipeline_yaml",
+      "ok": true,
+      "blocking": true,
+      "detail": "config/pipeline.yaml parses"
+    },
+    {
+      "check": "cohorts_yaml",
+      "ok": true,
+      "blocking": true,
+      "detail": "33 cohorts registered"
+    },
+    {
+      "check": "cpsm_patches",
+      "ok": true,
+      "blocking": true,
+      "detail": "mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)"
+    },
+    {
+      "check": "cdr_file",
+      "ok": true,
+      "blocking": true,
+      "detail": "/Users/denverncube/work/CPSM_agent/inputs/cdr/mmc1.xlsx"
+    },
+    {
+      "check": "cdr_sheet",
+      "ok": true,
+      "blocking": true,
+      "detail": "TCGA-CDR, TCGA-CDR_Notes, ExtraEndpoints, ExtraEndpoints_Notes, Table4_PHAssumptionTests, Table5_PHAssumptionTests, TSS_Info, Fig2EFG_AdditionalInfo"
+    },
+    {
+      "check": "cache_writable",
+      "ok": true,
+      "blocking": true,
+      "detail": "/Users/denverncube/work/CPSM_agent/data/se_cache"
+    },
+    {
+      "check": "disk_free_gb",
+      "ok": true,
+      "blocking": false,
+      "detail": "1502 GB free (all 33 cohorts need roughly 60-80 GB of raw files + caches)"
+    },
+    {
+      "check": "cptac_exports",
+      "ok": true,
+      "blocking": false,
+      "detail": "0 CPTAC TSVs in inputs/cptac/"
+    },
+    {
+      "check": "rppa_cache_status",
+      "ok": true,
+      "blocking": false,
+      "detail": "0/33 cohorts cached (RPPA)"
+    },
+    {
+      "check": "se_cache_status",
+      "ok": true,
+      "blocking": false,
+      "detail": "33/33 cohorts cached"
+    },
+    {
+      "check": "gdc_api_reachable",
+      "ok": true,
+      "blocking": false,
+      "detail": "data release Data Release 46.0 - August 10, 2026"
+    }
+  ]
+}

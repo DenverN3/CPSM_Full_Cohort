@@ -1,0 +1,144 @@
+{
+  "cohort": "THYM",
+  "name": "Thymoma",
+  "status": "success",
+  "started": "2026-09-27 02:05:06",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 89,
+      "events": 8,
+      "rate": 0.0898876404494382
+    },
+    {
+      "endpoint": "PFI",
+      "n": 89,
+      "events": 17,
+      "rate": 0.191011235955056
+    }
+  ],
+  "n_genes_after_filter": 456,
+  "n_genes_modelled": 456,
+  "n_samples": 89,
+  "n_events": 17,
+  "gene_column_trace": {
+    "combined_input": 456,
+    "after_data_process_f": 456,
+    "after_tr_test_f": 456,
+    "Train_Norm_data": 456,
+    "Test_Norm_data": 456
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 71,
+  "n_test": 18,
+  "train_events": 14,
+  "test_events": 3,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 42,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 7,
+  "model4_genes": ["KAP1", "YB1", "ULK1_pS757", "STING", "DNA.Ligase.IV", "ACC_pS79", "ACC1", "ALKBH5", "EphA2_pY588", "P62LCKLIGAND"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.71,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.72,
+      "Train_Mean_MAE": 68.99,
+      "Train_Median_MAE": 70.03,
+      "Train_IBS": 0.19,
+      "Test_C_index": 0.71,
+      "Test_Mean_MAE": 80.82,
+      "Test_Median_MAE": 85.72,
+      "Test_IBS": 0.139
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.91,
+      "Train_Mean_MAE": 507.92,
+      "Train_Median_MAE": 173.81,
+      "Train_IBS": 0.079,
+      "Test_C_index": 0.46,
+      "Test_Mean_MAE": 296.47,
+      "Test_Median_MAE": 140.76,
+      "Test_IBS": 0.301
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.95,
+      "Train_Mean_MAE": 167.67,
+      "Train_Median_MAE": 110.87,
+      "Train_IBS": 0.08,
+      "Test_C_index": 0.54,
+      "Test_Mean_MAE": 184.26,
+      "Test_Median_MAE": 148.68,
+      "Test_IBS": 0.27
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.88,
+      "Train_Mean_MAE": 83.61,
+      "Train_Median_MAE": 80.57,
+      "Train_IBS": 0.127,
+      "Test_C_index": 0.62,
+      "Test_Mean_MAE": 97.36,
+      "Test_Median_MAE": 96.09,
+      "Test_IBS": 0.153
+    }
+  ],
+  "n_genes_p05": 76,
+  "n_genes_fdr05": 6,
+  "n_genes_fdr05_test_direction_agrees": 4,
+  "n_genes_ph_violation": 22,
+  "cpsm_median_split_minority_fraction_median": 0.492957746478873,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:05:22",
+  "runtime_min": 0.3,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "31/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 17 events (rate 0.191)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 14 train events, 3 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_type: merged rare levels into Other: Thymoma; Type A|Thymoma; Type AB; Thymoma; Type B1|Thymoma; Type B2; Thymoma; Type B2|Thymoma; Type B3; Thymoma; Type B3"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

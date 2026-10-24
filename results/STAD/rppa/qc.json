@@ -1,0 +1,134 @@
+{
+  "cohort": "STAD",
+  "name": "Stomach adenocarcinoma",
+  "status": "success",
+  "started": "2026-09-27 03:54:09",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 332,
+      "events": 138,
+      "rate": 0.41566265060241
+    },
+    {
+      "endpoint": "PFI",
+      "n": 334,
+      "events": 111,
+      "rate": 0.332335329341317
+    }
+  ],
+  "n_genes_after_filter": 458,
+  "n_genes_modelled": 458,
+  "n_samples": 328,
+  "n_events": 136,
+  "gene_column_trace": {
+    "combined_input": 458,
+    "after_data_process_f": 458,
+    "after_tr_test_f": 458,
+    "Train_Norm_data": 458,
+    "Test_Norm_data": 458
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 262,
+  "n_test": 66,
+  "train_events": 107,
+  "test_events": 29,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 53,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 19,
+  "model4_genes": ["EphA2", "CLAUDIN7", "TIGAR", "MTSS1", "P90RSK", "SYK", "COLLAGENVI", "CD20", "DRP1", "MCT4"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.54,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.64,
+      "Train_Mean_MAE": 19.38,
+      "Train_Median_MAE": 14.91,
+      "Train_IBS": 0.222,
+      "Test_C_index": 0.54,
+      "Test_Mean_MAE": 20.92,
+      "Test_Median_MAE": 16.11,
+      "Test_IBS": 0.328
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.75,
+      "Train_Mean_MAE": 28.97,
+      "Train_Median_MAE": 15.85,
+      "Train_IBS": 0.17,
+      "Test_C_index": 0.51,
+      "Test_Mean_MAE": 33.83,
+      "Test_Median_MAE": 19.28,
+      "Test_IBS": 0.502
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.78,
+      "Train_Mean_MAE": 26.84,
+      "Train_Median_MAE": 14.48,
+      "Train_IBS": 0.161,
+      "Test_C_index": 0.52,
+      "Test_Mean_MAE": 30.12,
+      "Test_Median_MAE": 18.13,
+      "Test_IBS": 0.43
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.71,
+      "Train_Mean_MAE": 20.41,
+      "Train_Median_MAE": 18.38,
+      "Train_IBS": 0.19,
+      "Test_C_index": 0.49,
+      "Test_Mean_MAE": 21.66,
+      "Test_Median_MAE": 14.81,
+      "Test_IBS": 0.386
+    }
+  ],
+  "n_genes_p05": 84,
+  "n_genes_fdr05": 15,
+  "n_genes_fdr05_test_direction_agrees": 5,
+  "n_genes_ph_violation": 37,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:55:30",
+  "runtime_min": 1.4,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "29/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "93 missing values median-imputed per antibody (whole-cohort medians)"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

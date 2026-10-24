@@ -1,0 +1,8 @@
+== TGCT/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/TGCT/logs/all_20260915_212601.log
+[2026-09-15 23:24:25] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 23:24:25] WARNING [endpoint] No auto candidate met thresholds; using PFI with 35 events (rate 0.261)
+[2026-09-15 23:24:26] Endpoint PFI (auto); 134 samples; 5000 genes modelled
+[2026-09-15 23:24:26] WARNING [power] Underpowered: 28 train events, 5 test events
+[2026-09-15 23:24:52] ERROR [lasso] x should be a matrix with 2 or more columns
+[2026-09-15 23:24:58] WARNING [model] Models 2 and 3 skipped: LASSO unavailable
+[2026-09-15 23:25:07] qc.json written: /Users/denverncube/work/CPSM_agent/results/TGCT/qc.json (status=partial)

@@ -1,0 +1,134 @@
+{
+  "cohort": "HNSC",
+  "name": "Head and neck squamous cell carcinoma",
+  "status": "success",
+  "started": "2026-09-27 03:39:20",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 353,
+      "events": 173,
+      "rate": 0.490084985835694
+    },
+    {
+      "endpoint": "PFI",
+      "n": 353,
+      "events": 141,
+      "rate": 0.39943342776204
+    }
+  ],
+  "n_genes_after_filter": 456,
+  "n_genes_modelled": 456,
+  "n_samples": 348,
+  "n_events": 170,
+  "gene_column_trace": {
+    "combined_input": 456,
+    "after_data_process_f": 456,
+    "after_tr_test_f": 456,
+    "Train_Norm_data": 456,
+    "Test_Norm_data": 456
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 278,
+  "n_test": 70,
+  "train_events": 139,
+  "test_events": 31,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 44,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 16,
+  "model4_genes": ["HER3_pY1289", "Mnk1.1", "Wee1.1", "H2AX_pS139.1", "DDR1_pY513.1", "EphA2.1", "LC3A.B.1", "MCT4.1", "CD49B", "CD29.1"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.63,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.59,
+      "Train_Mean_MAE": 32.45,
+      "Train_Median_MAE": 21.88,
+      "Train_IBS": 0.19,
+      "Test_C_index": 0.63,
+      "Test_Mean_MAE": 33.11,
+      "Test_Median_MAE": 23.44,
+      "Test_IBS": 0.315
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.73,
+      "Train_Mean_MAE": 37.08,
+      "Train_Median_MAE": 23.69,
+      "Train_IBS": 0.185,
+      "Test_C_index": 0.61,
+      "Test_Mean_MAE": 40.02,
+      "Test_Median_MAE": 35.62,
+      "Test_IBS": 0.34
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.74,
+      "Train_Mean_MAE": 34.2,
+      "Train_Median_MAE": 21.42,
+      "Train_IBS": 0.176,
+      "Test_C_index": 0.62,
+      "Test_Mean_MAE": 37.14,
+      "Test_Median_MAE": 30.97,
+      "Test_IBS": 0.319
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.68,
+      "Train_Mean_MAE": 34.68,
+      "Train_Median_MAE": 28.15,
+      "Train_IBS": 0.183,
+      "Test_C_index": 0.59,
+      "Test_Mean_MAE": 37.23,
+      "Test_Median_MAE": 28.33,
+      "Test_IBS": 0.329
+    }
+  ],
+  "n_genes_p05": 32,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 66,
+  "cpsm_median_split_minority_fraction_median": 0.496402877697842,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:40:57",
+  "runtime_min": 1.6,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "511/967 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "19837 missing values median-imputed per antibody (whole-cohort medians)"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

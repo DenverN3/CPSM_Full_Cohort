@@ -1,0 +1,149 @@
+{
+  "cohort": "ACC",
+  "name": "Adrenocortical carcinoma",
+  "status": "success",
+  "started": "2026-09-27 01:46:59",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 46,
+      "events": 14,
+      "rate": 0.304347826086957
+    },
+    {
+      "endpoint": "PFI",
+      "n": 46,
+      "events": 26,
+      "rate": 0.565217391304348
+    }
+  ],
+  "n_genes_after_filter": 458,
+  "n_genes_modelled": 458,
+  "n_samples": 45,
+  "n_events": 25,
+  "gene_column_trace": {
+    "combined_input": 458,
+    "after_data_process_f": 458,
+    "after_tr_test_f": 458,
+    "Train_Norm_data": 458,
+    "Test_Norm_data": 458
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 36,
+  "n_test": 9,
+  "train_events": 21,
+  "test_events": 4,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 100,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 2,
+  "model4_genes": ["GCLM", "SDHA", "SOD2", "CD171", "DNA.Ligase.IV", "TSC1", "UQCRC2", "MSI2", "ERK2", "RRM2"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.95,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.71,
+      "Train_Mean_MAE": 32.91,
+      "Train_Median_MAE": 16.93,
+      "Train_IBS": 0.21,
+      "Test_C_index": 0.86,
+      "Test_Mean_MAE": 42.04,
+      "Test_Median_MAE": 21.16,
+      "Test_IBS": 0.287
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 34.41,
+      "Train_Median_MAE": 10.89,
+      "Train_IBS": 0.183,
+      "Test_C_index": 0.9,
+      "Test_Mean_MAE": 34.09,
+      "Test_Median_MAE": 23.94,
+      "Test_IBS": 0.172
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.78,
+      "Train_Mean_MAE": 35.2,
+      "Train_Median_MAE": 14.46,
+      "Train_IBS": 0.165,
+      "Test_C_index": 0.95,
+      "Test_Mean_MAE": 37.55,
+      "Test_Median_MAE": 23.87,
+      "Test_IBS": 0.176
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 69.39,
+      "Train_Median_MAE": 69.27,
+      "Train_IBS": 0.136,
+      "Test_C_index": 0.81,
+      "Test_Mean_MAE": 45.69,
+      "Test_Median_MAE": 33.54,
+      "Test_IBS": 0.185
+    }
+  ],
+  "n_genes_p05": 141,
+  "n_genes_fdr05": 45,
+  "n_genes_fdr05_test_direction_agrees": 36,
+  "n_genes_ph_violation": 54,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 01:47:09",
+  "runtime_min": 0.2,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "29/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "480 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 26 events (rate 0.565)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 21 train events, 4 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Stage I"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

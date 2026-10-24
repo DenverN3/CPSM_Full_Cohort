@@ -1,0 +1,7 @@
+== LUAD_rppa/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/LUAD/rppa/logs/all_20260927_013117.log
+[2026-09-27 01:33:16] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 01:33:17] Endpoint OS (configured); 354 samples; 455 genes modelled
+[2026-09-27 01:33:17] ERROR [genes] combined_input: 455 gene columns missing NOT explained by the CPSM near-constant filter (X1433BETA, X1433EPSILON, X1433ZETA, X4EBP1, X4EBP1_pS65, X4EBP1_pT37T46, X4EBP1_pT70, X53BP1, ACC_pS79, ACC1)
+[2026-09-27 01:33:22] ERROR [lasso] x should be a matrix with 2 or more columns
+[2026-09-27 01:33:41] WARNING [model] Models 2 and 3 skipped: LASSO unavailable
+[2026-09-27 01:34:34] qc.json written: /Users/denverncube/work/CPSM_agent/results/LUAD/rppa/qc.json (status=partial)

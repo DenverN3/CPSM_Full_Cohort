@@ -1,0 +1,108 @@
+{
+  "cohort": "BLCA",
+  "name": "Bladder urothelial carcinoma",
+  "status": "partial",
+  "started": "2026-09-15 23:06:23",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 404,
+      "events": 177,
+      "rate": 0.438118811881188
+    },
+    {
+      "endpoint": "PFI",
+      "n": 405,
+      "events": 173,
+      "rate": 0.42716049382716
+    }
+  ],
+  "n_genes_after_filter": 38214,
+  "n_genes_modelled": 5000,
+  "n_samples": 402,
+  "n_events": 177,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 4999,
+    "Test_Norm_data": 4999
+  },
+  "gene_drops": [
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000118702.9",
+      "train_modal_value_fraction": 0.801,
+      "explained_by_cpsm_near_constant_filter": true
+    }
+  ],
+  "n_genes_removed_by_cpsm_filter": 1,
+  "n_train": 321,
+  "n_test": 81,
+  "train_events": 147,
+  "test_events": 30,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 982,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 0,
+  "model4_genes": ["ENSG00000182534.13", "ENSG00000088340.17", "ENSG00000197608.11", "ENSG00000135842.17", "ENSG00000130164.14", "ENSG00000183578.8", "ENSG00000239112.1", "ENSG00000169902.15", "ENSG00000073605.18", "ENSG00000135046.14"],
+  "models_built": ["Model1", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.63,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.66,
+      "Train_Mean_MAE": 32.26,
+      "Train_Median_MAE": 19.5,
+      "Train_IBS": 0.22,
+      "Test_C_index": 0.63,
+      "Test_Mean_MAE": 35.34,
+      "Test_Median_MAE": 24.62,
+      "Test_IBS": 0.641
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.72,
+      "Train_Mean_MAE": 34.72,
+      "Train_Median_MAE": 28.81,
+      "Train_IBS": 0.215,
+      "Test_C_index": 0.63,
+      "Test_Mean_MAE": 38.6,
+      "Test_Median_MAE": 22.15,
+      "Test_IBS": 0.651
+    }
+  ],
+  "n_genes_p05": 1306,
+  "n_genes_fdr05": 299,
+  "n_genes_fdr05_test_direction_agrees": 262,
+  "n_genes_ph_violation": 781,
+  "cpsm_median_split_minority_fraction_median": 0.498442367601246,
+  "n_issue_errors": 1,
+  "finished": "2026-09-15 23:08:00",
+  "runtime_min": 1.6,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:01"
+}

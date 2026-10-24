@@ -1,0 +1,134 @@
+{
+  "cohort": "UCEC",
+  "name": "Uterine corpus endometrial carcinoma",
+  "status": "success",
+  "started": "2026-09-27 03:55:53",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 438,
+      "events": 75,
+      "rate": 0.171232876712329
+    },
+    {
+      "endpoint": "PFI",
+      "n": 438,
+      "events": 96,
+      "rate": 0.219178082191781
+    }
+  ],
+  "n_genes_after_filter": 463,
+  "n_genes_modelled": 463,
+  "n_samples": 430,
+  "n_events": 75,
+  "gene_column_trace": {
+    "combined_input": 463,
+    "after_data_process_f": 463,
+    "after_tr_test_f": 463,
+    "Train_Norm_data": 463,
+    "Test_Norm_data": 463
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 344,
+  "n_test": 86,
+  "train_events": 61,
+  "test_events": 14,
+  "underpowered": false,
+  "model_covariates": ["Age", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 43,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 6,
+  "model4_genes": ["PDHK1", "b.Actin", "COG3", "ANNEXIN1", "PR", "X1433EPSILON", "ZAP.70", "SF2", "CD45", "Hexokinase.II"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.85,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.75,
+      "Train_Mean_MAE": 122.8,
+      "Train_Median_MAE": 126.86,
+      "Train_IBS": 0.189,
+      "Test_C_index": 0.84,
+      "Test_Mean_MAE": 117.28,
+      "Test_Median_MAE": 124.83,
+      "Test_IBS": 0.243
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.77,
+      "Train_Mean_MAE": 177.59,
+      "Train_Median_MAE": 143.35,
+      "Train_IBS": 0.161,
+      "Test_C_index": 0.75,
+      "Test_Mean_MAE": 172.32,
+      "Test_Median_MAE": 148.31,
+      "Test_IBS": 0.239
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.82,
+      "Train_Mean_MAE": 128.38,
+      "Train_Median_MAE": 127.69,
+      "Train_IBS": 0.162,
+      "Test_C_index": 0.85,
+      "Test_Mean_MAE": 122.82,
+      "Test_Median_MAE": 120.39,
+      "Test_IBS": 0.218
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 130.53,
+      "Train_Median_MAE": 130.51,
+      "Train_IBS": 0.167,
+      "Test_C_index": 0.85,
+      "Test_Mean_MAE": 124.53,
+      "Test_Median_MAE": 113.28,
+      "Test_IBS": 0.201
+    }
+  ],
+  "n_genes_p05": 58,
+  "n_genes_fdr05": 3,
+  "n_genes_fdr05_test_direction_agrees": 3,
+  "n_genes_ph_violation": 24,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:58:19",
+  "runtime_min": 2.4,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "264/727 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "9612 missing values median-imputed per antibody (whole-cohort medians)"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

@@ -1,0 +1,134 @@
+{
+  "cohort": "MESO",
+  "name": "Mesothelioma",
+  "status": "success",
+  "started": "2026-09-27 02:00:52",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 61,
+      "events": 57,
+      "rate": 0.934426229508197
+    },
+    {
+      "endpoint": "PFI",
+      "n": 60,
+      "events": 44,
+      "rate": 0.733333333333333
+    }
+  ],
+  "n_genes_after_filter": 458,
+  "n_genes_modelled": 458,
+  "n_samples": 61,
+  "n_events": 57,
+  "gene_column_trace": {
+    "combined_input": 458,
+    "after_data_process_f": 458,
+    "after_tr_test_f": 458,
+    "Train_Norm_data": 458,
+    "Test_Norm_data": 458
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 48,
+  "n_test": 13,
+  "train_events": 45,
+  "test_events": 12,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 43,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 9,
+  "model4_genes": ["SDHA", "MCT4", "Hexokinase.I", "COG3", "Vinculin", "TRIP13", "Aurora.A", "PAI1", "ACETYLATUBULINLYS40", "P16INK4A"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.56,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.59,
+      "Train_Mean_MAE": 11.36,
+      "Train_Median_MAE": 7.15,
+      "Train_IBS": 0.133,
+      "Test_C_index": 0.56,
+      "Test_Mean_MAE": 8.72,
+      "Test_Median_MAE": 8.08,
+      "Test_IBS": 0.092
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.82,
+      "Train_Mean_MAE": 13.17,
+      "Train_Median_MAE": 5.16,
+      "Train_IBS": 0.062,
+      "Test_C_index": 0.38,
+      "Test_Mean_MAE": 11.22,
+      "Test_Median_MAE": 9.66,
+      "Test_IBS": 0.11
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.83,
+      "Train_Mean_MAE": 8.83,
+      "Train_Median_MAE": 6.22,
+      "Train_IBS": 0.097,
+      "Test_C_index": 0.36,
+      "Test_Mean_MAE": 9.48,
+      "Test_Median_MAE": 10.19,
+      "Test_IBS": 0.094
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.79,
+      "Train_Mean_MAE": 8.97,
+      "Train_Median_MAE": 8.72,
+      "Train_IBS": 0.097,
+      "Test_C_index": 0.49,
+      "Test_Mean_MAE": 8.6,
+      "Test_Median_MAE": 10.22,
+      "Test_IBS": 0.089
+    }
+  ],
+  "n_genes_p05": 62,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 30,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:01:03",
+  "runtime_min": 0.2,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "29/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_type: merged rare levels into Other: Diffuse malignant mesothelioma - NOS; Sarcomatoid mesothelioma"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

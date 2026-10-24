@@ -1,0 +1,136 @@
+{
+  "cohort": "READ",
+  "name": "Rectum adenocarcinoma",
+  "status": "success",
+  "started": "2026-09-15 23:11:34",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 159,
+      "events": 25,
+      "rate": 0.157232704402516
+    },
+    {
+      "endpoint": "PFI",
+      "n": 158,
+      "events": 36,
+      "rate": 0.227848101265823
+    }
+  ],
+  "n_genes_after_filter": 35992,
+  "n_genes_modelled": 5000,
+  "n_samples": 158,
+  "n_events": 36,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 4998,
+    "Test_Norm_data": 4998
+  },
+  "gene_drops": [
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000126890.13",
+      "train_modal_value_fraction": 0.81,
+      "explained_by_cpsm_near_constant_filter": true
+    },
+    {
+      "step": "Train_Norm_data",
+      "gene": "ENSG00000211684.2",
+      "train_modal_value_fraction": 0.802,
+      "explained_by_cpsm_near_constant_filter": true
+    }
+  ],
+  "n_genes_removed_by_cpsm_filter": 2,
+  "n_train": 126,
+  "n_test": 32,
+  "train_events": 29,
+  "test_events": 7,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 245,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 14,
+  "model4_genes": ["ENSG00000110375.3", "ENSG00000122592.8", "ENSG00000160284.15", "ENSG00000109255.11", "ENSG00000198535.5", "ENSG00000188342.12", "ENSG00000138604.10", "ENSG00000120068.7", "ENSG00000139793.18", "ENSG00000280693.2"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.49,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.69,
+      "Train_Mean_MAE": 29.55,
+      "Train_Median_MAE": 27.04,
+      "Train_IBS": 0.217,
+      "Test_C_index": 0.37,
+      "Test_Mean_MAE": 33.71,
+      "Test_Median_MAE": 30.94,
+      "Test_IBS": 0.238
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.92,
+      "Train_Mean_MAE": 61,
+      "Train_Median_MAE": 37.14,
+      "Train_IBS": 0.114,
+      "Test_C_index": 0.47,
+      "Test_Mean_MAE": 74.29,
+      "Test_Median_MAE": 43.99,
+      "Test_IBS": 0.627
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.92,
+      "Train_Mean_MAE": 41.06,
+      "Train_Median_MAE": 33.1,
+      "Train_IBS": 0.11,
+      "Test_C_index": 0.49,
+      "Test_Mean_MAE": 47.72,
+      "Test_Median_MAE": 44.04,
+      "Test_IBS": 0.524
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.85,
+      "Train_Mean_MAE": 31.48,
+      "Train_Median_MAE": 29.44,
+      "Train_IBS": 0.159,
+      "Test_C_index": 0.47,
+      "Test_Mean_MAE": 38.98,
+      "Test_Median_MAE": 40.14,
+      "Test_IBS": 0.34
+    }
+  ],
+  "n_genes_p05": 230,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 446,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 23:12:29",
+  "runtime_min": 0.9,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:53"
+}

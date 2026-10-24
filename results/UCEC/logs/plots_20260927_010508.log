@@ -1,0 +1,5 @@
+[01:05:08] UCEC/plots waiting for an R slot (max 2)
+[01:05:08] slot 1 acquired
+[2026-09-27 01:05:09] Cohort UCEC | platform rna | stage plots | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:05:10] Plots rewritten in /Users/denverncube/work/CPSM_agent/results/UCEC/plots
+[2026-09-27 01:05:10] qc.json written: /Users/denverncube/work/CPSM_agent/results/UCEC/qc.json (status=success)

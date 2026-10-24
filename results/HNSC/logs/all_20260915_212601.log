@@ -1,0 +1,35 @@
+[21:26:01] HNSC/all waiting for an R slot (max 2)
+[23:14:33] slot 2 acquired
+[2026-09-15 23:14:34] Cohort HNSC | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-15 23:14:35] Fetch: querying GDC for TCGA-HNSC STAR counts (Primary Tumor)
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-HNSC
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By workflow.type
+ooo By sample.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+Downloading data for project TCGA-HNSC
+GDCdownload will download 520 files. A total of 2.200875562 GB
+Downloading chunk 1 of 11 (50 files, size = 211.659713 MB) as Tue_Sep_15_23_14_59_2026_0.tar.gz
+At least one of the chunks download was not correct. We will retry
+Downloading chunk 1 of 11 (50 files, size = 211.659713 MB) as Tue_Sep_15_23_14_59_2026_0.tar.gz
+[2026-09-15 23:15:00] FAILED: There was an error in the download process (we might had a connection problem with GDC server).
+Please run this function it again.
+Try using method = `client` or setting files.per.chunk to a small number.
+[2026-09-15 23:15:00] qc.json written: /Users/denverncube/work/CPSM_agent/results/HNSC/qc.json (status=failed)

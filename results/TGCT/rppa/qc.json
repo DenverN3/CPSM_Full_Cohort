@@ -1,0 +1,154 @@
+{
+  "cohort": "TGCT",
+  "name": "Testicular germ cell tumors",
+  "status": "success",
+  "started": "2026-09-27 02:06:07",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 104,
+      "events": 4,
+      "rate": 0.0384615384615385
+    },
+    {
+      "endpoint": "PFI",
+      "n": 104,
+      "events": 28,
+      "rate": 0.269230769230769
+    }
+  ],
+  "n_genes_after_filter": 456,
+  "n_genes_modelled": 456,
+  "n_samples": 99,
+  "n_events": 26,
+  "gene_column_trace": {
+    "combined_input": 456,
+    "after_data_process_f": 456,
+    "after_tr_test_f": 456,
+    "Train_Norm_data": 456,
+    "Test_Norm_data": 456
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 79,
+  "n_test": 20,
+  "train_events": 19,
+  "test_events": 7,
+  "underpowered": true,
+  "model_covariates": ["Age", "stage_group", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 17,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 5,
+  "model4_genes": ["ACC1", "Creb", "X1433ZETA", "ATR", "TUFM", "S6", "Glutaminase", "X1433EPSILON", "BCLXL", "ECADHERIN"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.73,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.68,
+      "Train_Mean_MAE": 158.84,
+      "Train_Median_MAE": 112.12,
+      "Train_IBS": 0.183,
+      "Test_C_index": 0.73,
+      "Test_Mean_MAE": 196.48,
+      "Test_Median_MAE": 115.84,
+      "Test_IBS": 0.174
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.83,
+      "Train_Mean_MAE": 172.6,
+      "Train_Median_MAE": 138.98,
+      "Train_IBS": 0.144,
+      "Test_C_index": 0.66,
+      "Test_Mean_MAE": 135.16,
+      "Test_Median_MAE": 99.87,
+      "Test_IBS": 0.209
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 131.98,
+      "Train_Median_MAE": 138.61,
+      "Train_IBS": 0.16,
+      "Test_C_index": 0.7,
+      "Test_Mean_MAE": 111.7,
+      "Test_Median_MAE": 137.79,
+      "Test_IBS": 0.178
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.85,
+      "Train_Mean_MAE": 134.2,
+      "Train_Median_MAE": 137.31,
+      "Train_IBS": 0.16,
+      "Test_C_index": 0.6,
+      "Test_Mean_MAE": 105.01,
+      "Test_Median_MAE": 117.23,
+      "Test_IBS": 0.2
+    }
+  ],
+  "n_genes_p05": 22,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 17,
+  "cpsm_median_split_minority_fraction_median": 0.493670886075949,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:07:21",
+  "runtime_min": 1.2,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "31/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "samples",
+      "severity": "info",
+      "message": "14 samples without a TCGA-CDR record removed"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 28 events (rate 0.269)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 19 train events, 7 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_type: merged rare levels into Other: Non-Seminoma; Choriocarcinoma|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature); Non-Seminoma; Embryonal Carcinoma|[Not Available]; Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Mature); Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Teratoma (Immature); Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)|Seminoma; NOS; Non-Seminoma; Embryonal Carcinoma|Seminoma; NOS; Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma; Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Mature); Non-Seminoma; Teratoma (Mature); Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Choriocarcinoma; Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma|Seminoma; NOS; Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Teratoma (Mature)|Seminoma; NOS|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma; Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature); Seminoma; NOS|Non-Seminoma; Choriocarcinoma; Seminoma; NOS|Non-Seminoma; Embryonal Carcinoma; Seminoma; NOS|Non-Seminoma; Teratoma (Mature); Seminoma; NOS|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Embryonal Carcinoma; Seminoma; NOS|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Immature); Seminoma; NOS|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "histological_type: test levels unseen in train (Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Teratoma (Mature); Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Embryonal Carcinoma; Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Choriocarcinoma|Non-Seminoma; Yolk Sac Tumor|Seminoma; NOS; Seminoma; NOS|Non-Seminoma; Teratoma (Mature)|Non-Seminoma; Teratoma (Immature)|Non-Seminoma; Yolk Sac Tumor; Non-Seminoma; Yolk Sac Tumor|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Teratoma (Mature)|Seminoma; NOS; Non-Seminoma; Teratoma (Mature)|[Not Available]|Non-Seminoma; Embryonal Carcinoma|Non-Seminoma; Yolk Sac Tumor) -> Other"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

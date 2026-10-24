@@ -1,0 +1,6 @@
+== OV/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/OV/logs/all_20260915_212601.log
+[2026-09-15 21:43:14] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 21:43:17] Endpoint OS (auto); 424 samples; 5000 genes modelled
+[2026-09-15 21:43:53] ERROR [lasso] x should be a matrix with 2 or more columns
+[2026-09-15 21:44:24] WARNING [model] Models 2 and 3 skipped: LASSO unavailable
+[2026-09-15 21:45:03] qc.json written: /Users/denverncube/work/CPSM_agent/results/OV/qc.json (status=partial)

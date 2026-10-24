@@ -1,0 +1,137 @@
+{
+  "cohort": "CHOL",
+  "name": "Cholangiocarcinoma",
+  "status": "partial",
+  "started": "2026-09-27 01:58:38",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 30,
+      "events": 15,
+      "rate": 0.5
+    },
+    {
+      "endpoint": "PFI",
+      "n": 30,
+      "events": 16,
+      "rate": 0.533333333333333
+    }
+  ],
+  "n_genes_after_filter": 456,
+  "n_genes_modelled": 456,
+  "n_samples": 29,
+  "n_events": 16,
+  "gene_column_trace": {
+    "combined_input": 456,
+    "after_data_process_f": 456,
+    "after_tr_test_f": 456,
+    "Train_Norm_data": 456,
+    "Test_Norm_data": 456
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 23,
+  "n_test": 6,
+  "train_events": 11,
+  "test_events": 5,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 14,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 0,
+  "model4_genes": ["PAI1", "PDL1", "GAPDH", "BCLXL", "Histone.H3", "ECADHERIN", "VEGFR2", "CD45", "XPA", "IRS1"],
+  "models_built": ["Model1", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.7,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.63,
+      "Train_Mean_MAE": 21.97,
+      "Train_Median_MAE": 18.15,
+      "Train_IBS": 0.263,
+      "Test_C_index": 0.6,
+      "Test_Mean_MAE": 29.11,
+      "Test_Median_MAE": 12.43,
+      "Test_IBS": 0.23
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.91,
+      "Train_Mean_MAE": 36.06,
+      "Train_Median_MAE": 35.01,
+      "Train_IBS": 0.144,
+      "Test_C_index": 0.7,
+      "Test_Mean_MAE": 22.69,
+      "Test_Median_MAE": 5.86,
+      "Test_IBS": 0.189
+    }
+  ],
+  "n_genes_p05": 21,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 85,
+  "cpsm_median_split_minority_fraction_median": 0.478260869565217,
+  "n_issue_errors": 1,
+  "finished": "2026-09-27 01:58:44",
+  "runtime_min": 0.1,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "31/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "240 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 16 events (rate 0.533)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 11 train events, 5 test events"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Stage II; Stage III; Stage IV"
+    },
+    {
+      "stage": "lasso",
+      "severity": "error",
+      "message": "x should be a matrix with 2 or more columns"
+    },
+    {
+      "stage": "model",
+      "severity": "warning",
+      "message": "Models 2 and 3 skipped: LASSO unavailable"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

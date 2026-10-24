@@ -1,0 +1,31 @@
+[03:47:24] KIRC_rppa/all waiting for an R slot (max 2)
+[03:47:24] slot 1 acquired
+[2026-09-27 03:47:25] Cohort KIRC | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 03:47:25] Fetch: cached RPPA matrix exists (/Users/denverncube/work/CPSM_agent/data/se_cache/TCGA-KIRC_rppa.rds); skipping
+[2026-09-27 03:47:26] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-27 03:47:26] INFO [features] 257/487 antibodies dropped for >30% missing values
+[2026-09-27 03:47:26] INFO [features] 336 missing values median-imputed per antibody (whole-cohort medians)
+[2026-09-27 03:47:27] Endpoint OS (auto); 478 samples; 230 genes modelled
+[2026-09-27 03:47:27] INFO [clinical] stage_group: merged rare levels into Other: Unknown
+[2026-09-27 03:47:27] Continuous per-gene Cox on 230 genes
+[2026-09-27 03:47:27] Gene Cox: 23/230
+[2026-09-27 03:47:27] Gene Cox: 46/230
+[2026-09-27 03:47:27] Gene Cox: 69/230
+[2026-09-27 03:47:27] Gene Cox: 92/230
+[2026-09-27 03:47:27] Gene Cox: 115/230
+[2026-09-27 03:47:27] Gene Cox: 138/230
+[2026-09-27 03:47:27] Gene Cox: 161/230
+[2026-09-27 03:47:27] Gene Cox: 184/230
+[2026-09-27 03:47:27] Gene Cox: 207/230
+[2026-09-27 03:47:27] Gene Cox: 230/230
+[2026-09-27 03:47:27] CPSM Univariate_sig_features_f
+[2026-09-27 03:47:28] CPSM Lasso_PI_scores_f
+[2026-09-27 03:47:31] MTLR Model1_Clinical (Model_type=1, 3 features)
+[2026-09-27 03:48:18] MTLR Model2_PI (Model_type=2, 1 features)
+[2026-09-27 03:48:53] MTLR Model3_PI_Clinical (Model_type=3, 4 features)
+[2026-09-27 03:49:41] MTLR Model4_Univariate_Clinical (Model_type=4, 13 features)
+The sampleTCGA-A3-3326-01Ais present in the Test dataset.
+
+Using IDs as id variables
+There were 50 or more warnings (use warnings() to see the first 50)
+[2026-09-27 03:50:40] qc.json written: /Users/denverncube/work/CPSM_agent/results/KIRC/rppa/qc.json (status=success)

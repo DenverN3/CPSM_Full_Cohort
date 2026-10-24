@@ -1,0 +1,5 @@
+== ACC/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/ACC/logs/all_20260915_212601.log
+[2026-09-15 21:27:29] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 21:27:30] Endpoint PFI (auto); 79 samples; 5000 genes modelled
+[2026-09-15 21:27:31] WARNING [power] Underpowered: 32 train events, 8 test events
+[2026-09-15 21:28:07] qc.json written: /Users/denverncube/work/CPSM_agent/results/ACC/qc.json (status=success)

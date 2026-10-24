@@ -1,0 +1,131 @@
+{
+  "cohort": "KICH",
+  "name": "Kidney chromophobe",
+  "status": "success",
+  "started": "2026-09-27 02:00:05",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 62,
+      "events": 8,
+      "rate": 0.129032258064516
+    },
+    {
+      "endpoint": "PFI",
+      "n": 62,
+      "events": 10,
+      "rate": 0.161290322580645
+    }
+  ],
+  "n_genes_after_filter": 457,
+  "n_genes_modelled": 457,
+  "n_samples": 62,
+  "n_events": 10,
+  "gene_column_trace": {
+    "combined_input": 457,
+    "after_data_process_f": 457,
+    "after_tr_test_f": 457,
+    "Train_Norm_data": 457,
+    "Test_Norm_data": 457
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 49,
+  "n_test": 13,
+  "train_events": 5,
+  "test_events": 5,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 0,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 4,
+  "models_built": ["Model1", "Model2", "Model3"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.68,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.83,
+      "Train_Mean_MAE": 476.75,
+      "Train_Median_MAE": 493.25,
+      "Train_IBS": 0.053,
+      "Test_C_index": 0.68,
+      "Test_Mean_MAE": 489.38,
+      "Test_Median_MAE": 517.93,
+      "Test_IBS": 0.257
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.94,
+      "Train_Mean_MAE": 1183.86,
+      "Train_Median_MAE": 813.46,
+      "Train_IBS": 0.032,
+      "Test_C_index": 0.49,
+      "Test_Mean_MAE": 1304.66,
+      "Test_Median_MAE": 405.2,
+      "Test_IBS": 0.404
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.99,
+      "Train_Mean_MAE": 1666.26,
+      "Train_Median_MAE": 1207.41,
+      "Train_IBS": 0.015,
+      "Test_C_index": 0.46,
+      "Test_Mean_MAE": 1749.7,
+      "Test_Median_MAE": 562.41,
+      "Test_IBS": 0.311
+    }
+  ],
+  "n_genes_p05": 82,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 35,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 02:00:14",
+  "runtime_min": 0.2,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "30/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "endpoint",
+      "severity": "warning",
+      "message": "No auto candidate met thresholds; using PFI with 10 events (rate 0.161)"
+    },
+    {
+      "stage": "power",
+      "severity": "warning",
+      "message": "Underpowered: 5 train events, 5 test events"
+    },
+    {
+      "stage": "model",
+      "severity": "warning",
+      "message": "Model4 skipped: no CPSM univariate genes"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

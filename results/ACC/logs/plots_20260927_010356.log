@@ -1,0 +1,5 @@
+[01:03:56] ACC/plots waiting for an R slot (max 2)
+[01:03:56] slot 1 acquired
+[2026-09-27 01:03:57] Cohort ACC | platform rna | stage plots | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:03:58] Plots rewritten in /Users/denverncube/work/CPSM_agent/results/ACC/plots
+[2026-09-27 01:03:58] qc.json written: /Users/denverncube/work/CPSM_agent/results/ACC/qc.json (status=success)

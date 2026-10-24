@@ -1,0 +1,6 @@
+== DLBC/all exit=0 log=/Users/denverncube/work/CPSM_agent/results/DLBC/logs/all_20260915_212601.log
+[2026-09-15 21:26:57] CPSM 1.4.0; patches: mtlr_model3_median_assignment=already_fixed; univariate_median_cutoff=already_fixed; univariate_empty_result_guard=applied(1,1)
+[2026-09-15 21:26:57] WARNING [endpoint] No auto candidate met thresholds; using PFI with 12 events (rate 0.255)
+[2026-09-15 21:26:58] Endpoint PFI (auto); 47 samples; 5000 genes modelled
+[2026-09-15 21:26:58] WARNING [power] Underpowered: 7 train events, 5 test events
+[2026-09-15 21:27:26] qc.json written: /Users/denverncube/work/CPSM_agent/results/DLBC/qc.json (status=success)

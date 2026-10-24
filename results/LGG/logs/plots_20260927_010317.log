@@ -1,0 +1,5 @@
+[01:03:17] LGG/plots waiting for an R slot (max 2)
+[01:03:17] slot 1 acquired
+[2026-09-27 01:03:18] Cohort LGG | platform rna | stage plots | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 01:03:19] Plots rewritten in /Users/denverncube/work/CPSM_agent/results/LGG/plots
+[2026-09-27 01:03:19] qc.json written: /Users/denverncube/work/CPSM_agent/results/LGG/qc.json (status=success)

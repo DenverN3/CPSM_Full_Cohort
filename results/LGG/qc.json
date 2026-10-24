@@ -1,0 +1,123 @@
+{
+  "cohort": "LGG",
+  "name": "Brain lower grade glioma",
+  "status": "success",
+  "started": "2026-09-15 22:38:06",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "grade", "histology"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 511,
+      "events": 125,
+      "rate": 0.244618395303327
+    },
+    {
+      "endpoint": "PFI",
+      "n": 511,
+      "events": 192,
+      "rate": 0.37573385518591
+    }
+  ],
+  "n_genes_after_filter": 40183,
+  "n_genes_modelled": 5000,
+  "n_samples": 484,
+  "n_events": 124,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 5000,
+    "Test_Norm_data": 5000
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 387,
+  "n_test": 97,
+  "train_events": 102,
+  "test_events": 22,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "histological_grade", "histological_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 2731,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 17,
+  "model4_genes": ["ENSG00000255020.1", "ENSG00000106211.10", "ENSG00000121671.12", "ENSG00000153820.13", "ENSG00000198353.8", "ENSG00000095713.14", "ENSG00000273001.1", "ENSG00000102172.16", "ENSG00000197903.8", "ENSG00000188488.14"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model4",
+  "best_test_c_index": 0.88,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.8,
+      "Train_Mean_MAE": 54.38,
+      "Train_Median_MAE": 45.19,
+      "Train_IBS": 0.171,
+      "Test_C_index": 0.78,
+      "Test_Mean_MAE": 61.61,
+      "Test_Median_MAE": 52.04,
+      "Test_IBS": 0.202
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 63.18,
+      "Train_Median_MAE": 61.94,
+      "Train_IBS": 0.158,
+      "Test_C_index": 0.87,
+      "Test_Mean_MAE": 67.37,
+      "Test_Median_MAE": 67.43,
+      "Test_IBS": 0.174
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 58.08,
+      "Train_Median_MAE": 53.99,
+      "Train_IBS": 0.152,
+      "Test_C_index": 0.86,
+      "Test_Mean_MAE": 64.43,
+      "Test_Median_MAE": 63.76,
+      "Test_IBS": 0.184
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 67.54,
+      "Train_Median_MAE": 62.71,
+      "Train_IBS": 0.152,
+      "Test_C_index": 0.88,
+      "Test_Mean_MAE": 75.15,
+      "Test_Median_MAE": 71.81,
+      "Test_IBS": 0.178
+    }
+  ],
+  "n_genes_p05": 3187,
+  "n_genes_fdr05": 2969,
+  "n_genes_fdr05_test_direction_agrees": 2850,
+  "n_genes_ph_violation": 1580,
+  "cpsm_median_split_minority_fraction_median": 0.498708010335917,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 22:41:13",
+  "runtime_min": 3.1,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:32"
+}

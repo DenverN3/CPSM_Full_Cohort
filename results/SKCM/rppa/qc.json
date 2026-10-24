@@ -1,0 +1,139 @@
+{
+  "cohort": "SKCM",
+  "name": "Skin cutaneous melanoma",
+  "status": "success",
+  "started": "2026-09-27 03:52:11",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": ["Primary Tumor", "Metastatic"],
+  "configured_covariates": ["age", "gender", "stage", "sample_type"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 338,
+      "events": 153,
+      "rate": 0.452662721893491
+    },
+    {
+      "endpoint": "PFI",
+      "n": 335,
+      "events": 210,
+      "rate": 0.626865671641791
+    }
+  ],
+  "n_genes_after_filter": 456,
+  "n_genes_modelled": 456,
+  "n_samples": 335,
+  "n_events": 153,
+  "gene_column_trace": {
+    "combined_input": 456,
+    "after_data_process_f": 456,
+    "after_tr_test_f": 456,
+    "Train_Norm_data": 456,
+    "Test_Norm_data": 456
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 268,
+  "n_test": 67,
+  "train_events": 122,
+  "test_events": 31,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group", "sample_type"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 81,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 22,
+  "model4_genes": ["P27", "RAB11", "Aurora.ABC_pT288_pT232_pT198", "Connexin.43", "X1433ZETA", "Notch3", "PAI1", "Granzyme.B", "RB", "FGF.basic"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.68,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.68,
+      "Train_Mean_MAE": 56.93,
+      "Train_Median_MAE": 35.34,
+      "Train_IBS": 0.156,
+      "Test_C_index": 0.68,
+      "Test_Mean_MAE": 60.28,
+      "Test_Median_MAE": 35.09,
+      "Test_IBS": 0.258
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.77,
+      "Train_Mean_MAE": 65.4,
+      "Train_Median_MAE": 36.52,
+      "Train_IBS": 0.12,
+      "Test_C_index": 0.63,
+      "Test_Mean_MAE": 90.88,
+      "Test_Median_MAE": 52.3,
+      "Test_IBS": 0.263
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.81,
+      "Train_Mean_MAE": 58.86,
+      "Train_Median_MAE": 31.21,
+      "Train_IBS": 0.11,
+      "Test_C_index": 0.65,
+      "Test_Mean_MAE": 84.88,
+      "Test_Median_MAE": 49.33,
+      "Test_IBS": 0.229
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.74,
+      "Train_Mean_MAE": 54.42,
+      "Train_Median_MAE": 40.71,
+      "Train_IBS": 0.142,
+      "Test_C_index": 0.66,
+      "Test_Mean_MAE": 57.12,
+      "Test_Median_MAE": 35.31,
+      "Test_IBS": 0.239
+    }
+  ],
+  "n_genes_p05": 107,
+  "n_genes_fdr05": 44,
+  "n_genes_fdr05_test_direction_agrees": 35,
+  "n_genes_ph_violation": 22,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:54:07",
+  "runtime_min": 1.9,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "31/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "1440 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "samples",
+      "severity": "info",
+      "message": "1 duplicate aliquots removed (first barcode per patient kept)"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

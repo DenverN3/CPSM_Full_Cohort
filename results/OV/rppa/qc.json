@@ -1,0 +1,144 @@
+{
+  "cohort": "OV",
+  "name": "Ovarian serous cystadenocarcinoma",
+  "status": "success",
+  "started": "2026-09-27 03:49:00",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 416,
+      "events": 250,
+      "rate": 0.600961538461538
+    },
+    {
+      "endpoint": "PFI",
+      "n": 416,
+      "events": 295,
+      "rate": 0.709134615384615
+    }
+  ],
+  "n_genes_after_filter": 464,
+  "n_genes_modelled": 464,
+  "n_samples": 414,
+  "n_events": 248,
+  "gene_column_trace": {
+    "combined_input": 464,
+    "after_data_process_f": 464,
+    "after_tr_test_f": 464,
+    "Train_Norm_data": 464,
+    "Test_Norm_data": 464
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 331,
+  "n_test": 83,
+  "train_events": 195,
+  "test_events": 53,
+  "underpowered": false,
+  "model_covariates": ["Age", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 38,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 94,
+  "model4_genes": ["MAPK_pT202Y204", "MCT4", "CD44", "CJUN_pS73", "VHL", "MTOR_pS2448", "AR", "MEK1_pS217S221", "U.Histone.H2B", "Myt1"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.65,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.63,
+      "Train_Mean_MAE": 26.18,
+      "Train_Median_MAE": 19.28,
+      "Train_IBS": 0.143,
+      "Test_C_index": 0.63,
+      "Test_Mean_MAE": 30.75,
+      "Test_Median_MAE": 29.2,
+      "Test_IBS": 0.112
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 25.52,
+      "Train_Median_MAE": 12.18,
+      "Train_IBS": 0.065,
+      "Test_C_index": 0.62,
+      "Test_Mean_MAE": 34.89,
+      "Test_Median_MAE": 29.43,
+      "Test_IBS": 0.14
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.87,
+      "Train_Mean_MAE": 25.34,
+      "Train_Median_MAE": 13.68,
+      "Train_IBS": 0.062,
+      "Test_C_index": 0.65,
+      "Test_Mean_MAE": 35.17,
+      "Test_Median_MAE": 28.42,
+      "Test_IBS": 0.143
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.69,
+      "Train_Mean_MAE": 25.53,
+      "Train_Median_MAE": 23.45,
+      "Train_IBS": 0.132,
+      "Test_C_index": 0.61,
+      "Test_Mean_MAE": 30.32,
+      "Test_Median_MAE": 29.32,
+      "Test_IBS": 0.111
+    }
+  ],
+  "n_genes_p05": 47,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 55,
+  "cpsm_median_split_minority_fraction_median": 0.498489425981873,
+  "n_issue_errors": 0,
+  "finished": "2026-09-27 03:51:21",
+  "runtime_min": 2.4,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "23/487 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "7541 missing values median-imputed per antibody (whole-cohort medians)"
+    },
+    {
+      "stage": "samples",
+      "severity": "info",
+      "message": "1 samples without a TCGA-CDR record removed"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Unknown"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

@@ -1,0 +1,22 @@
+[02:11:45] LAML_rppa/all waiting for an R slot (max 2)
+[02:11:45] slot 1 acquired
+[2026-09-27 02:11:47] Cohort LAML | platform rppa | stage all | root /Users/denverncube/work/CPSM_agent
+[2026-09-27 02:11:48] Fetch: querying GDC for TCGA-LAML RPPA
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+
+
+| file_count| case_count|data_category               |
+|----------:|----------:|:---------------------------|
+|       2656|        200|Simple Nucleotide Variation |
+|       1082|        200|Sequencing Reads            |
+|        205|        200|Biospecimen                 |
+|        201|        200|Clinical                    |
+|       2066|        200|Copy Number Variation       |
+|        861|        194|Transcriptome Profiling     |
+|       1164|        194|DNA Methylation             |
+|        604|        151|Structural Variation        |
+[2026-09-27 02:11:49] FAILED: Please set a valid data.category argument from the column data_category above. We could not validade the data.category for project TCGA-LAML
+[2026-09-27 02:11:49] qc.json written: /Users/denverncube/work/CPSM_agent/results/LAML/rppa/qc.json (status=failed)

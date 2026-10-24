@@ -1,0 +1,11 @@
+{
+  "cohort": "LAML",
+  "platform": "rppa",
+  "stage": "all",
+  "status": "failed",
+  "error": "Please set a valid data.category argument from the column data_category above. We could not validade the data.category for project TCGA-LAML",
+  "traceback": ["tryCatchList(expr, classes, parentenv, handlers)", "tryCatchOne(expr, names, parentenv, handlers[[1L]])", "doTryCatch(return(expr), name, parentenv, handler)", "withCallingHandlers({", "fetch_rppa(code, cfg, paths, force = force)", "TCGAbiolinks::GDCquery(project = paste0(\"TCGA-\", code), data.category = \"Proteome Profiling\", ", "checkDataCategoriesInput(project, data.category)", "stop(\"Please set a valid data.category argument from the column data_category above. We could not validade the data.category for project \", ", ".handleSimpleError(function (e) ", "h(simpleError(msg, call))"],
+  "finished": "2026-09-27 02:11:49",
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

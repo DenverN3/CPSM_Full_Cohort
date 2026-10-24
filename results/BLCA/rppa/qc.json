@@ -1,0 +1,122 @@
+{
+  "cohort": "BLCA",
+  "name": "Bladder urothelial carcinoma",
+  "status": "partial",
+  "started": "2026-09-27 03:16:06",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "platform": "rppa",
+  "endpoint": "OS",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 341,
+      "events": 154,
+      "rate": 0.451612903225806
+    },
+    {
+      "endpoint": "PFI",
+      "n": 342,
+      "events": 150,
+      "rate": 0.43859649122807
+    }
+  ],
+  "n_genes_after_filter": 216,
+  "n_genes_modelled": 216,
+  "n_samples": 340,
+  "n_events": 154,
+  "gene_column_trace": {
+    "combined_input": 216,
+    "after_data_process_f": 216,
+    "after_tr_test_f": 216,
+    "Train_Norm_data": 216,
+    "Test_Norm_data": 216
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 272,
+  "n_test": 68,
+  "train_events": 118,
+  "test_events": 36,
+  "underpowered": false,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 19,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 0,
+  "model4_genes": ["ANNEXIN1", "GATA3", "ADAR1", "EGFR", "SRC", "SMAC", "YB1", "SCD1", "TAZ", "S6"],
+  "models_built": ["Model1", "Model4"],
+  "best_model": "Model1",
+  "best_test_c_index": 0.69,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.64,
+      "Train_Mean_MAE": 36.05,
+      "Train_Median_MAE": 22.08,
+      "Train_IBS": 0.215,
+      "Test_C_index": 0.69,
+      "Test_Mean_MAE": 37.14,
+      "Test_Median_MAE": 20.64,
+      "Test_IBS": 0.453
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.7,
+      "Train_Mean_MAE": 37.37,
+      "Train_Median_MAE": 30.78,
+      "Train_IBS": 0.198,
+      "Test_C_index": 0.62,
+      "Test_Mean_MAE": 41.14,
+      "Test_Median_MAE": 21.94,
+      "Test_IBS": 0.455
+    }
+  ],
+  "n_genes_p05": 18,
+  "n_genes_fdr05": 1,
+  "n_genes_fdr05_test_direction_agrees": 1,
+  "n_genes_ph_violation": 11,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 1,
+  "finished": "2026-09-27 03:16:58",
+  "runtime_min": 0.9,
+  "issues": [
+    {
+      "stage": "features",
+      "severity": "info",
+      "message": "511/727 antibodies dropped for >30% missing values"
+    },
+    {
+      "stage": "clinical",
+      "severity": "info",
+      "message": "stage_group: merged rare levels into Other: Stage I; Unknown"
+    },
+    {
+      "stage": "lasso",
+      "severity": "error",
+      "message": "x should be a matrix with 2 or more columns"
+    },
+    {
+      "stage": "model",
+      "severity": "warning",
+      "message": "Models 2 and 3 skipped: LASSO unavailable"
+    }
+  ],
+  "r_version": "R version 4.6.1 (2026-06-24)"
+}

@@ -1,0 +1,123 @@
+{
+  "cohort": "KICH",
+  "name": "Kidney chromophobe",
+  "status": "success",
+  "started": "2026-09-15 22:09:43",
+  "locked": false,
+  "seed": 123456,
+  "train_fraction": 0.8,
+  "sample_types": "Primary Tumor",
+  "configured_covariates": ["age", "gender", "stage"],
+  "configured_endpoint": "auto",
+  "cpsm_version": "1.4.0",
+  "patches": {
+    "mtlr_model3_median_assignment": "already_fixed",
+    "univariate_median_cutoff": "already_fixed",
+    "univariate_empty_result_guard": "applied(1,1)"
+  },
+  "endpoint": "PFI",
+  "endpoint_rule": "auto",
+  "endpoint_candidates": [
+    {
+      "endpoint": "OS",
+      "n": 65,
+      "events": 9,
+      "rate": 0.138461538461538
+    },
+    {
+      "endpoint": "PFI",
+      "n": 65,
+      "events": 11,
+      "rate": 0.169230769230769
+    }
+  ],
+  "n_genes_after_filter": 36284,
+  "n_genes_modelled": 5000,
+  "n_samples": 65,
+  "n_events": 11,
+  "gene_column_trace": {
+    "combined_input": 5000,
+    "after_data_process_f": 5000,
+    "after_tr_test_f": 5000,
+    "Train_Norm_data": 5000,
+    "Test_Norm_data": 5000
+  },
+  "gene_drops": [],
+  "n_genes_removed_by_cpsm_filter": 0,
+  "n_train": 52,
+  "n_test": 13,
+  "train_events": 8,
+  "test_events": 3,
+  "underpowered": true,
+  "model_covariates": ["Age", "gender", "stage_group"],
+  "dropped_covariates": [],
+  "cpsm_univariate_sig_genes": 137,
+  "lasso_settings": {
+    "nfolds": 5,
+    "n_repeats": 50,
+    "alpha": 1,
+    "freq_threshold": 0.6
+  },
+  "lasso_selected": 3,
+  "model4_genes": ["ENSG00000198682.13", "ENSG00000176919.13", "ENSG00000145675.15", "ENSG00000151418.12", "ENSG00000128591.16", "ENSG00000054179.12", "ENSG00000180815.14", "ENSG00000163297.17", "ENSG00000161249.21", "ENSG00000225342.2"],
+  "models_built": ["Model1", "Model2", "Model3", "Model4"],
+  "best_model": "Model3",
+  "best_test_c_index": 0.83,
+  "model_performance": [
+    {
+      "Model": "Model1",
+      "Train_C_index": 0.93,
+      "Train_Mean_MAE": 289.65,
+      "Train_Median_MAE": 245.46,
+      "Train_IBS": 0.085,
+      "Test_C_index": 0.47,
+      "Test_Mean_MAE": 245,
+      "Test_Median_MAE": 212.4,
+      "Test_IBS": 0.13
+    },
+    {
+      "Model": "Model2",
+      "Train_C_index": 0.93,
+      "Train_Mean_MAE": 276.11,
+      "Train_Median_MAE": 299.24,
+      "Train_IBS": 0.081,
+      "Test_C_index": 0.8,
+      "Test_Mean_MAE": 262.02,
+      "Test_Median_MAE": 308.18,
+      "Test_IBS": 0.102
+    },
+    {
+      "Model": "Model3",
+      "Train_C_index": 0.96,
+      "Train_Mean_MAE": 352.12,
+      "Train_Median_MAE": 327.04,
+      "Train_IBS": 0.062,
+      "Test_C_index": 0.83,
+      "Test_Mean_MAE": 299.63,
+      "Test_Median_MAE": 277.64,
+      "Test_IBS": 0.103
+    },
+    {
+      "Model": "Model4",
+      "Train_C_index": 0.96,
+      "Train_Mean_MAE": 470.82,
+      "Train_Median_MAE": 470.27,
+      "Train_IBS": 0.047,
+      "Test_C_index": 0.6,
+      "Test_Mean_MAE": 567.96,
+      "Test_Median_MAE": 322.69,
+      "Test_IBS": 0.145
+    }
+  ],
+  "n_genes_p05": 699,
+  "n_genes_fdr05": 0,
+  "n_genes_fdr05_test_direction_agrees": 0,
+  "n_genes_ph_violation": 365,
+  "cpsm_median_split_minority_fraction_median": 0.5,
+  "n_issue_errors": 0,
+  "finished": "2026-09-15 22:10:17",
+  "runtime_min": 0.6,
+  "issues": [],
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "replotted": "2026-09-27 01:04:22"
+}
